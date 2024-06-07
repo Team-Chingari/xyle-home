@@ -1,9 +1,37 @@
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import div_3_1_img from "./assets/div-3-1-img.png";
 import div_3_2_img from "./assets/div-3-2-img.png";
+import graph_img from "./assets/div-6-graph.png";
+import coins_img from "./assets/div-6-coins.png";
 
 
 export default function App() {
+
+  const [showCoins, setShowCoins] = useState(false);
+  const div6Ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowCoins(entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0.15, 
+      }
+    );
+
+    if (div6Ref.current) {
+      observer.observe(div6Ref.current);
+    }
+
+    return () => {
+      if (div6Ref.current) {
+        observer.unobserve(div6Ref.current);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -38,23 +66,42 @@ export default function App() {
           <span className="block font-bold font-gelasio text-9xl">Feel The Odds Fall</span>
           <span className="block font-bold font-gelasio text-9xl">In Your Favour</span>
       </div>
-      <div className='div-4-2 h-100 flex justify-center space-x-60 text-center text-white px-96'>
-        <div className='py-4'>
-          <span className="block font-bold font-gelasio text-6xl px-5 p-2">150+</span>
-          <span className="block font-arial text-3xl">Clients</span>
-        </div>
-
-        <div className='py-4'>
-          <span className="block font-bold font-gelasio text-6xl px-5 p-2">320+</span>
-          <span className="block font-arial text-3xl">Websites/Apps</span>
-        </div>
-
-        <div className='py-4'>
-          <span className="block font-bold font-gelasio text-6xl px-5 p-2">95%</span>
-          <span className="block font-arial text-3xl">Customer Retention</span>
-        </div>
+      <div className='div42 flex justify-center text-center text-white'>
+      <div className='relative w-full flex justify-center items-center'>
+          <div className="absolute inset-0 bg-white opacity-50"></div>
+          <div className='relative div42 flex justify-center text-center text-white px-16 py-5'>
+            <div className='px-4'>
+              <span className="block font-bold font-gelasio text-7xl px-48 p-2">150+</span>
+              <span className="block font-arial text-3xl">Clients</span>
+            </div>
+            <div className='px-4'>
+              <span className="block font-bold font-gelasio text-7xl px-48 p-2">320+</span>
+              <span className="block font-arial text-3xl">Websites/Apps</span>
+            </div>
+            <div className='px-4 w-1/3'>
+              <span className="block font-bold font-gelasio text-7xl px-48 p-2">95%</span>
+              <span className="block font-arial text-3xl">Customer Retention</span>
+            </div>
+          </div>
+          </div>
         
       </div>
+    </div>
+
+    <div className="div-6 relative bg-cover bg-center min-h-screen flex items-center justify-center">
+        <div className="text-center text-white py-40">
+          <span className="block font-bold font-gelasio text-9xl px-60">3Billion</span>
+          <span className="block font-arial text-6xl">Impressions Monthly</span>
+
+          <div className="relative py-40 mb-40">
+          <img src={graph_img} className={`absolute transition-opacity duration-500 ${showCoins ? 'opacity-0' : 'opacity-100'}`} alt='Graph' />
+          <img src={coins_img} className={`absolute transition-opacity duration-500 ${showCoins ? 'opacity-100' : 'opacity-0'}`} alt='Coins' />
+        </div>
+        </div>
+      </div>
+
+    <div ref={div6Ref} className="div-7 relative bg-cover bg-center min-h-screen flex items-center justify-center">
+      
     </div>
 
     </>
