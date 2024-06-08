@@ -3,11 +3,13 @@ import './App.css';
 import div_3_1_img from "./assets/div-3-1-img.png";
 import div_3_2_img from "./assets/div-3-2-img.png";
 import graph_img from "./assets/div-6-graph.png";
+import samplelogo from "./assets/samplelogo.png";
 import coins_img from "./assets/div-6-coins.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Slider from "react-slick";
 
@@ -23,7 +25,7 @@ export default function App() {
     cursor: 'pointer',
     margin: '0 10px',
   };
-  
+
   const data = [
     'Quote 1',
     'Quote 2',
@@ -148,23 +150,25 @@ export default function App() {
 
       <div ref={div6Ref} className="div-7 relative bg-cover bg-center min-h-screen flex items-center justify-center">
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div style={{ position: 'relative', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '300px' }}>
+          <div style={{ position: 'relative', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             {data.map((quote, index) => (
               <div
                 key={index}
                 style={{
-                  width: '120px',
-                  height: '80px',
+                  // width: index === currentIndex ? '1320px' : '1220px', // Change width based on the current index
+                  width: '500px',
+                  height: '100px',
                   background: 'white',
-                  borderRadius: '8px',
+                  filter: blur('100px'),
+                  borderRadius: '30px',
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
                   marginBottom: '20px',
-                  transform: `translateY(${index === currentIndex ? '-10px' : '0'}) scale(${index === currentIndex ? '1.2' : '1'})`,
-                  fontSize: index === currentIndex ? '24px' : '16px',
+                  transform: `translateY(${index === currentIndex ? '-70px' : '0'}) scale(${index === currentIndex ? '1.1' : '1'})`,
+                  fontSize: index === currentIndex ? '24px' : '14px',
                   transition: 'transform 0.5s, font-size 0.5s',
-                  opacity: index === currentIndex ? '1' : '0.5',
+                  opacity: index === currentIndex ? '0.6' : '0.5',
                 }}
               >
                 {quote}
@@ -177,6 +181,89 @@ export default function App() {
           </div>
         </div>
       </div>
+
+      <div className="div-8 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
+        <div className="text-white py-40">
+          <span className="block font-bold font-gelasio text-9xl px-60 ">Our Partners</span>
+          <div class="container text-center ">
+            <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-1">
+              <div class="col">
+                <div class="p-3">
+                  <img src={samplelogo} alt="" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-3">
+                  <img src={samplelogo} alt="" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-3">
+                  <img src={samplelogo} alt="" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-3">
+                  <img src={samplelogo} alt="" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-3">
+                  <img src={samplelogo} alt="" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-3">
+                  <img src={samplelogo} alt="" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-3">
+                  <img src={samplelogo} alt="" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="p-3">
+                  <img src={samplelogo} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="div-9 relative bg-cover bg-center min-h-screen flex justify-center">
+        <div class="container">
+          <div class="row align-items-center ">
+
+            <div class="col text-white font-bold font-gelasio text-9xl">
+              Let's Get Acquainted
+            </div>
+
+            <div class="col text-bg-secondary p-20 opacity-35 rounded-4 font-gotham">
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="nameInput" placeholder="Name" aria-describedby="nameHelp" />
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" id="emailInput" placeholder="Email address" aria-describedby="emailHelp" />
+                </div>
+                <div class="mb-3">
+                  <input type="tel" class="form-control" id="mobileInput" placeholder="Mobile Number" />
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" id="commentsInput" placeholder="Add Comments" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
     </>
   );
 }
