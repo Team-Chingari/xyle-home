@@ -4,12 +4,15 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
+// TO BE FINALISED !!!!!!!!!!!!!!!!!!!!!!!
+
+
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Xyle Media',
+  tagline: 'Connecting Dots between Advertisers and Brands',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -90,44 +93,54 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Our Brands',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Monetiseup',
+                // to: '/docs/intro',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
+              {
+                label: 'Responseiq',
+                // to: '/docs/intro',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Company',
             items: [
               {
-                label: 'Stack Overflow',
+                label: 'Contact Us',
                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
               {
-                label: 'Discord',
+                label: 'About Us',
                 href: 'https://discordapp.com/invite/docusaurus',
               },
               {
-                label: 'Twitter',
+                label: 'Privacy',
+                href: 'https://twitter.com/docusaurus',
+              },
+              {
+                label: 'Terms',
                 href: 'https://twitter.com/docusaurus',
               },
             ],
           },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
+          // {
+          //   title: 'More',
+          //   items: [
+          //     {
+          //       label: 'Blog',
+          //       to: '/blog',
+          //     },
+          //     {
+          //       label: 'GitHub',
+          //       href: 'https://github.com/facebook/docusaurus',
+          //     },
+          //   ],
+          // },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },

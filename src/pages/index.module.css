@@ -3,6 +3,53 @@
  * and scoped locally.
  */
 
+
+ .heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-image: url('./bg1.png'); /* Adjust the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Ensure text is visible on the background */
+}
+
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.textSection {
+  background-image: url('./bg2.png'); /* Adjust the path to your second image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Ensure text is visible on the background */
+  text-align: center;
+  padding: 2rem; /* Adjust padding as needed */
+}
+
+.largeText {
+  font-size: 4vw; /* Use viewport width for responsiveness */
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0 0; /* Add margin to separate from the header */
+  padding: 0;
+}
+
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
@@ -20,4 +67,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+  .largeText {
+    font-size: 6vw; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .largeText {
+    font-size: 8vw; /* Adjust for very small screens */
+  }
 }
