@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import div_2_1_img from "./assets/div-2-1-img.png";
 import div_2_2_img from "./assets/div-2-2-img.png";
@@ -12,8 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
-import Slider from "react-slick";
+import Carousel from './components/HomepageFeatures/Carousel';
 
 export default function App() {
   useEffect(() => {
@@ -21,28 +20,6 @@ export default function App() {
       duration: 1000,
     });
   }, []);
-
-  const buttonStyle = {
-    background: 'transparent',
-    border: '2px solid #333',
-    color: '#333',
-    fontSize: '20px',
-    width: '40px',
-    height: '40px',
-    borderRadius: '50%',
-    cursor: 'pointer',
-    margin: '0 10px',
-  };
-
-  const data = [
-    'Quote 1',
-    'Quote 2',
-    'Quote 3',
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const nextData = () => setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
-  const prevData = () => setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
 
   const [animationDirection, setAnimationDirection] = useState("");
 
@@ -75,7 +52,7 @@ export default function App() {
 
       <div className="div-2 relative bg-cover bg-center min-h-screen flex ">
         <div className="div-2-1 w-1/2 h-full text-white font-jaldi text-6xl p-36 pr-30 leading-relaxed" data-aos="fade-right">
-        Transforming ideas into media marvels, we’re a dedicated agency crafting campaigns. With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand
+        Transforming ideas into media marvels, we&apos;re a dedicated agency crafting campaigns. With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand
         </div>
         <div className="div-2-2 w-1/2 p-40 pl-24 h-screen flex flex-col">
           <div className="flex flex-col h-2/5">
@@ -144,7 +121,7 @@ export default function App() {
         <p className="text-8xl text-[#FFFFFF]">Impressions Monthly</p>
         <div className="bg-white mt-20 w-[90%] h-96 rounded-2xl"></div>
       </div>
-      <div className="relative bg-black py-40 overflow-x-clip">
+      <div className="relative bg-black py-40 overflow-x-clip flex flex-col items-center justify-center h-screen">
         <img src={div_7_img} alt="some bg" className="absolute w-full h-full top-0 left-0 z-0 opacity-20"/>
         <Carousel items={carouselItems} />
       </div>
