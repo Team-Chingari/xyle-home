@@ -35,7 +35,8 @@
 }
 
 .div-7 {
-  background-image: url(assets/div-7-img.png);
+  /* background-image: url(assets/div-7-img.png); */
+  background-color: black;
 }
 
 .div-8 {
