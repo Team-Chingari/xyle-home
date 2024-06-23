@@ -144,7 +144,7 @@ export default function App() {
         <p className="text-8xl text-[#FFFFFF]">Impressions Monthly</p>
         <div className="bg-white mt-20 w-[90%] h-96 rounded-2xl"></div>
       </div>
-      <div className="relative bg-black py-40">
+      <div className="relative bg-black py-40 overflow-x-clip">
         <img src={div_7_img} alt="some bg" className="absolute w-full h-full top-0 left-0 z-0 opacity-20"/>
         <Carousel items={carouselItems} />
       </div>
