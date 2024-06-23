@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './App.css';
 import div_3_1_img from "./assets/div-3-1-img.png";
 import div_3_2_img from "./assets/div-3-2-img.png";
@@ -6,12 +6,9 @@ import graph_img from "./assets/div-6-graph.png";
 import samplelogo from "./assets/samplelogo.png";
 import coins_img from "./assets/div-6-coins.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Slider from "react-slick";
 
 export default function App() {
   const buttonStyle = {
@@ -185,45 +182,45 @@ export default function App() {
       <div className="div-8 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
         <div className="text-white py-40">
           <span className="block font-bold font-gelasio text-9xl px-60 ">Our Partners</span>
-          <div class="container text-center ">
-            <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-1">
-              <div class="col">
-                <div class="p-3">
+          <div className="container text-center ">
+            <div className="row row-cols-2 row-cols-lg-4 g-2 g-lg-1">
+              <div className="col">
+                <div className="p-3">
                   <img src={samplelogo} alt="" />
                 </div>
               </div>
-              <div class="col">
-                <div class="p-3">
+              <div className="col">
+                <div className="p-3">
                   <img src={samplelogo} alt="" />
                 </div>
               </div>
-              <div class="col">
-                <div class="p-3">
+              <div className="col">
+                <div className="p-3">
                   <img src={samplelogo} alt="" />
                 </div>
               </div>
-              <div class="col">
-                <div class="p-3">
+              <div className="col">
+                <div className="p-3">
                   <img src={samplelogo} alt="" />
                 </div>
               </div>
-              <div class="col">
-                <div class="p-3">
+              <div className="col">
+                <div className="p-3">
                   <img src={samplelogo} alt="" />
                 </div>
               </div>
-              <div class="col">
-                <div class="p-3">
+              <div className="col">
+                <div className="p-3">
                   <img src={samplelogo} alt="" />
                 </div>
               </div>
-              <div class="col">
-                <div class="p-3">
+              <div className="col">
+                <div className="p-3">
                   <img src={samplelogo} alt="" />
                 </div>
               </div>
-              <div class="col">
-                <div class="p-3">
+              <div className="col">
+                <div className="p-3">
                   <img src={samplelogo} alt="" />
                 </div>
               </div>
@@ -234,28 +231,28 @@ export default function App() {
       </div>
 
       <div className="div-9 relative bg-cover bg-center min-h-screen flex justify-center">
-        <div class="container">
-          <div class="row align-items-center ">
+        <div className="container">
+          <div className="row align-items-center ">
 
-            <div class="col text-white font-bold font-gelasio text-9xl">
-              Let's Get Acquainted
+            <div className="col text-white font-bold font-gelasio text-9xl">
+              Let&apos;s Get Acquainted
             </div>
 
-            <div class="col text-bg-secondary p-20 opacity-35 rounded-4 font-gotham">
+            <div className="col text-bg-secondary p-20 opacity-35 rounded-4 font-gotham">
               <form>
-                <div class="mb-3">
-                  <input type="text" class="form-control" id="nameInput" placeholder="Name" aria-describedby="nameHelp" />
+                <div className="mb-3">
+                  <input type="text" className="form-control" id="nameInput" placeholder="Name" aria-describedby="nameHelp" />
                 </div>
-                <div class="mb-3">
-                  <input type="email" class="form-control" id="emailInput" placeholder="Email address" aria-describedby="emailHelp" />
+                <div className="mb-3">
+                  <input type="email" className="form-control" id="emailInput" placeholder="Email address" aria-describedby="emailHelp" />
                 </div>
-                <div class="mb-3">
-                  <input type="tel" class="form-control" id="mobileInput" placeholder="Mobile Number" />
+                <div className="mb-3">
+                  <input type="tel" className="form-control" id="mobileInput" placeholder="Mobile Number" />
                 </div>
-                <div class="mb-3">
-                  <textarea class="form-control" id="commentsInput" placeholder="Add Comments" rows="3"></textarea>
+                <div className="mb-3">
+                  <textarea className="form-control" id="commentsInput" placeholder="Add Comments" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">Submit</button>
               </form>
             </div>
 
