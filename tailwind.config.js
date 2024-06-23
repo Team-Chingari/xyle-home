@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        gelasio: ["Gelasio", "serif"],
+        judson: ["Judson", "serif"],
+        georgia: ["Georgia", "serif"],
+        jaldi: ["Jaldi", "sans-serif"],
       },
     },
   },

@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
+import div_2_1_img from "./assets/div-2-1-img.png";
+import div_2_2_img from "./assets/div-2-2-img.png";
+import div_2_3_img from "./assets/div-2-3-img.png";
 import div_3_1_img from "./assets/div-3-1-img.png";
 import div_3_2_img from "./assets/div-3-2-img.png";
 import graph_img from "./assets/div-6-graph.png";
@@ -10,10 +13,18 @@ import { Carousel } from 'react-responsive-carousel';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Slider from "react-slick";
 
 export default function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   const buttonStyle = {
     background: 'transparent',
     border: '2px solid #333',
@@ -85,27 +96,39 @@ export default function App() {
     <>
       <div className="div-1 relative bg-cover bg-center min-h-screen flex items-center justify-center">
         <div className="text-center text-white">
-          <span className="block font-bold font-gelasio text-9xl">Connecting Dots</span>
-          <span className="block font-arial text-6xl">between</span>
-          <span className="block font-bold font-gelasio text-9xl">Advertisers</span>
-          <span className="block font-arial text-6xl">and</span>
-          <span className="block font-bold font-gelasio text-9xl">Brands</span>
+          <span data-aos="fade-up" className="block font-judson text-9xl">Connecting Dots</span>
+          <span data-aos="fade-up" data-aos-delay="50" className="block font-judson text-6xl">Between</span>
+          <span data-aos="fade-up" data-aos-delay="100" className="block font-judson text-9xl">Advertisers</span>
+          <span data-aos="fade-up" data-aos-delay="150" className="block font-judson text-6xl">And</span>
+          <span data-aos="fade-up" data-aos-delay="200" className="block font-judson text-9xl">Brands</span>
         </div>
       </div>
 
-      <div className="div-2 relative bg-cover bg-center min-h-screen flex items-center justify-center">
-        <div className="text-center text-white font-arial text-8xl mx-40">
-          Transforming ideas into media marvels, we’re a dedicated agency crafting campaigns. With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand
+      <div className="div-2 relative bg-cover bg-center min-h-screen flex ">
+        <div className="div-2-1 w-1/2 h-full text-white font-jaldi text-6xl p-36 pr-30 leading-relaxed" data-aos="fade-right">
+        Transforming ideas into media marvels, we’re a dedicated agency crafting campaigns. With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand
+        </div>
+        <div className="div-2-2 w-1/2 p-40 pl-24 h-screen flex flex-col">
+          <div className="flex flex-col h-2/5">
+            <div className="flex w-full h-full">
+              <img data-aos="fade-left" src={div_2_1_img} className="w-3/5" />
+              <img data-aos="fade-left" data-aos-delay="150" src={div_2_2_img} className="w-2/5" />
+            </div>
+          </div>
+  
+          <div className="h-3/5 pt-3">
+            <img data-aos="fade-left" src={div_2_3_img} data-aos-delay="200" alt="Image 3" className="w-full" />
+          </div>
         </div>
       </div>
 
-      <div className="div-3 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
-        <div className="text-center text-white font-gelasio font-bold text-8xl mx-40">
+      <div className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
+        <div data-aos="fade-down" className="text-center text-white font-georgia text-8xl mx-40">
           Our Brands
         </div>
         <div className="flex space-x-10">
-          <img src={div_3_1_img} alt="Brand 1" className="w-100 h-100" />
-          <img src={div_3_2_img} alt="Brand 2" className="w-100 h-100" />
+          <img data-aos="fade-right" src={div_3_1_img} alt="Brand 1" className="w-[55rem]" />
+          <img data-aos="fade-left" src={div_3_2_img} alt="Brand 2" className="w-[55rem]" />
         </div>
       </div>
 
