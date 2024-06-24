@@ -185,13 +185,41 @@ export default function App() {
         </div>
       </div>
 
-      <div className="div-5 relative bg-cover bg-center min-h-screen flex items-center justify-center bg-black">
-        <div className="text-center text-white font-arial text-8xl mx-40">
-          Transforming ideas into media marvels, we&pos;re a dedicated agency
-          crafting campaigns. With data as our compass, we navigate the media
-          landscape, achieving resonance and impact for your brand
+      <div className="div-5 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
+        <div className="flex flex-col space-y-8">
+          <div data-aos="fade-up-right" className="text-center font-georgia text-6xl mb-8">
+            <div class=" opacity-20 relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-0 sm:w-full sm:max-w-lg">
+              <div class=" px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                  <div class=" mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                    <h3 class="text-base leading-6" id="modal-title">Advertisers</h3>
+                    <div class="mt-2">
+                      <p class="text-sm"> “With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div data-aos="fade-up-left" className="text-center text-white font-georgia text-6xl">
+            <div class="opacity-20 relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-10 sm:w-full sm:max-w-lg">
+              <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                  <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                    <h3 class="text-base leading-6 text-gray-900" id="modal-title">Publish</h3>
+                    <div class="mt-2">
+                      <p class="text-sm text-gray-500"> “With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
+
 
       <div className="div-6 relative bg-cover bg-center min-h-screen flex items-center justify-center">
         <div className="text-center text-white py-40">
@@ -210,6 +238,7 @@ export default function App() {
           </div>
         </div>
       </div>
+
       <div className="relative bg-black py-40 overflow-x-clip flex flex-col items-center justify-center h-screen">
         <img
           src={div_7_img}
