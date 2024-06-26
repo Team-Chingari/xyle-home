@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
 import div_2_1_img from "./assets/div-2-1-img.png";
 import div_2_2_img from "./assets/div-2-2-img.png";
 import div_2_3_img from "./assets/div-2-3-img.png";
@@ -32,50 +32,119 @@ export default function App() {
     }
   }, [animationDirection]);
 
-
   const carouselItems = [
-    { quote: "\"With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand\"", author: "Sumedha", designation: "CEO, ResponsIQ" },
-    { quote: "\"Vidit Kothari, why you gotta suck so much butt? Stop crapping everywhere you go, what is this Pranav Dhawan behaviour?\"", author: "Sumedha", designation: "CEO, ResponsIQ" },
-    { quote: "\"Pranav Dhawan - khali kanastar, tum kuch karte hi toh nahi ho, yahi toh dikkat hai? Bring your dairy.\"", author: "Sumedha", designation: "CEO, ResponsIQ" },
+    {
+      quote:
+        '"With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand"',
+      author: "Sumedha",
+      designation: "CEO, ResponsIQ",
+    },
+    {
+      quote:
+        '"Vidit Kothari, why you gotta suck so much butt? Stop crapping everywhere you go, what is this Pranav Dhawan behaviour?"',
+      author: "Sumedha",
+      designation: "CEO, ResponsIQ",
+    },
+    {
+      quote:
+        '"Pranav Dhawan - khali kanastar, tum kuch karte hi toh nahi ho, yahi toh dikkat hai? Bring your dairy."',
+      author: "Sumedha",
+      designation: "CEO, ResponsIQ",
+    },
   ];
 
   return (
     <>
       <div className="div-1 relative bg-cover bg-center min-h-screen flex items-center justify-center">
         <div className="text-center text-white">
-          <span data-aos="fade-up" className="block font-judson text-9xl">Connecting Dots</span>
-          <span data-aos="fade-up" data-aos-delay="50" className="block font-judson text-6xl">Between</span>
-          <span data-aos="fade-up" data-aos-delay="100" className="block font-judson text-9xl">Advertisers</span>
-          <span data-aos="fade-up" data-aos-delay="150" className="block font-judson text-6xl">And</span>
-          <span data-aos="fade-up" data-aos-delay="200" className="block font-judson text-9xl">Brands</span>
+          <span data-aos="fade-up" className="block font-judson text-9xl">
+            Connecting Dots
+          </span>
+          <span
+            data-aos="fade-up"
+            data-aos-delay="50"
+            className="block font-judson text-6xl"
+          >
+            Between
+          </span>
+          <span
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="block font-judson text-9xl"
+          >
+            Advertisers
+          </span>
+          <span
+            data-aos="fade-up"
+            data-aos-delay="150"
+            className="block font-judson text-6xl"
+          >
+            And
+          </span>
+          <span
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="block font-judson text-9xl"
+          >
+            Brands
+          </span>
         </div>
       </div>
 
       <div className="div-2 relative bg-cover bg-center min-h-screen flex ">
-        <div className="div-2-1 w-1/2 h-full text-white font-jaldi text-6xl p-36 pr-30 leading-relaxed" data-aos="fade-right">
-        Transforming ideas into media marvels, we&apos;re a dedicated agency crafting campaigns. With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand
+        <div
+          className="div-2-1 w-1/2 h-full text-white font-jaldi text-6xl p-36 pr-30 leading-relaxed"
+          data-aos="fade-right"
+        >
+          Transforming ideas into media marvels, we&apos;re a dedicated agency
+          crafting campaigns. With data as our compass, we navigate the media
+          landscape, achieving resonance and impact for your brand
         </div>
         <div className="div-2-2 w-1/2 p-40 pl-24 h-screen flex flex-col">
           <div className="flex flex-col h-2/5">
             <div className="flex w-full h-full">
               <img data-aos="fade-left" src={div_2_1_img} className="w-3/5" />
-              <img data-aos="fade-left" data-aos-delay="150" src={div_2_2_img} className="w-2/5" />
+              <img
+                data-aos="fade-left"
+                data-aos-delay="150"
+                src={div_2_2_img}
+                className="w-2/5"
+              />
             </div>
           </div>
-  
+
           <div className="h-3/5 pt-3">
-            <img data-aos="fade-left" src={div_2_3_img} data-aos-delay="200" alt="Image 3" className="w-full" />
+            <img
+              data-aos="fade-left"
+              src={div_2_3_img}
+              data-aos-delay="200"
+              alt="Image 3"
+              className="w-full"
+            />
           </div>
         </div>
       </div>
 
-      <div className="div-3 relative overflow-x-clip bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
-        <div data-aos="fade-down" className="text-center text-white font-georgia text-8xl mx-40">
+      <div className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
+        <div
+          data-aos="fade-down"
+          className="text-center text-white font-georgia text-8xl mx-40"
+        >
           Our Brands
         </div>
         <div className="flex space-x-10">
-          <img data-aos="fade-right" src={div_3_1_img} alt="Brand 1" className="w-[55rem]" />
-          <img data-aos="fade-left" src={div_3_2_img} alt="Brand 2" className="w-[55rem]" />
+          <img
+            data-aos="fade-right"
+            src={div_3_1_img}
+            alt="Brand 1"
+            className="w-[55rem]"
+          />
+          <img
+            data-aos="fade-left"
+            src={div_3_2_img}
+            alt="Brand 2"
+            className="w-[55rem]"
+          />
         </div>
       </div>
 
@@ -88,10 +157,10 @@ export default function App() {
             In Your Favour
           </span>
         </div>
-        <div className="div42 flex justify-center text-center text-white">
+        <div className="div42 flex justify-center text-center text-white w-full">
           <div className="relative w-full flex justify-center items-center">
-            <div className="absolute inset-0 bg-white opacity-50"></div>
-            <div className="relative div42 flex justify-center text-center text-white px-16 py-5">
+            <div className="absolute inset-0 w-full bg-white opacity-50"></div>
+            <div className="relative div42 flex justify-between text-center text-white px-16 py-5 w-full">
               <div className="px-4">
                 <span className="block font-bold font-gelasio text-7xl px-48 p-2">
                   150+
@@ -117,13 +186,66 @@ export default function App() {
         </div>
       </div>
 
-      <div className="div-6 flex items-center bg-cover bg-center flex-col justify-center p-20">
-        <p className="text-9xl text-[#FFFFFF] font-bold">3 Billion</p>
-        <p className="text-8xl text-[#FFFFFF]">Impressions Monthly</p>
-        <div className="bg-white mt-20 w-[90%] h-96 rounded-2xl"></div>
+      <div className="div-5 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
+        <div className="flex flex-col space-y-8">
+          <div data-aos="fade-up-right" className="text-center font-georgia text-6xl mb-8">
+            <div class=" opacity-20 relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-0 sm:w-full sm:max-w-lg">
+              <div class=" px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                  <div class=" mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                    <h3 class="text-base leading-6" id="modal-title">Advertisers</h3>
+                    <div class="mt-2">
+                      <p class="text-sm"> “With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div data-aos="fade-up-left" className="text-center text-white font-georgia text-6xl">
+            <div class="opacity-20 relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-10 sm:w-full sm:max-w-lg">
+              <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                  <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                    <h3 class="text-base leading-6 text-gray-900" id="modal-title">Publish</h3>
+                    <div class="mt-2">
+                      <p class="text-sm text-gray-500"> “With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+
+      <div className="div-6 relative bg-cover bg-center min-h-screen flex items-center justify-center">
+        <div className="text-center text-white py-40">
+          <span className="block font-bold font-gelasio text-9xl px-60">
+            3Billion
+          </span>
+          <span className="block font-arial text-6xl">Impressions Monthly</span>
+
+          <div className="relative py-40 mb-15">
+            <video className="h-full w-full rounded-lg" controls autoPlay>
+              <source src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            {/* <img src={graph_img} className={absolute transition-opacity duration-500 ${showCoins ? 'opacity-0' : 'opacity-100'}} alt='Graph' />
+            <img src={coins_img} className={absolute transition-opacity duration-500 ${showCoins ? 'opacity-100' : 'opacity-0'}} alt='Coins' /> */}
+          </div>
+        </div>
+      </div>
+
       <div className="relative bg-black py-40 overflow-x-clip flex flex-col items-center justify-center h-screen">
-        <img src={div_7_img} alt="some bg" className="absolute w-full h-full top-0 left-0 z-0 opacity-20"/>
+        <img
+          src={div_7_img}
+          alt="some bg"
+          className="absolute w-full h-full top-0 left-0 z-0 opacity-20"
+        />
         <Carousel items={carouselItems} />
       </div>
 
@@ -183,12 +305,33 @@ export default function App() {
           Let&apos;s Get Acquainted
         </p>
         <div className="bg-[#FFFFFF] p-20 w-1/2 rounded-xl bg-opacity-25">
-          <form action="" className="w-full h-full flex flex-col items-center space-y-6">
-            <input type="text" placeholder="Name" className="bg-[#FFFFFF] bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"/>
-            <input type="text" placeholder="Email" className="bg-[#FFFFFF] bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"/>
-            <input type="text" placeholder="Mobile Number" className="bg-[#FFFFFF] bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"/>
-            <textarea type="text" placeholder="Add Comments" className="bg-[#FFFFFF] bg-opacity-20 p-3 h-40 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"/>
-            <button className="p-3 bg-[#FFFFFF] rounded-3xl w-fit text-2xl">SUBMIT</button>
+          <form
+            action=""
+            className="w-full h-full flex flex-col items-center space-y-6"
+          >
+            <input
+              type="text"
+              placeholder="Name"
+              className="bg-[#FFFFFF] bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
+            />
+            <input
+              type="text"
+              placeholder="Email"
+              className="bg-[#FFFFFF] bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
+            />
+            <input
+              type="text"
+              placeholder="Mobile Number"
+              className="bg-[#FFFFFF] bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
+            />
+            <textarea
+              type="text"
+              placeholder="Add Comments"
+              className="bg-[#FFFFFF] bg-opacity-20 p-3 h-40 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
+            />
+            <button className="p-3 bg-[#FFFFFF] rounded-3xl w-fit text-2xl">
+              SUBMIT
+            </button>
           </form>
         </div>
       </div>

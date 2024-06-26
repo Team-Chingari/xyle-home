@@ -8,10 +8,15 @@
 
 @font-face {
     font-family: "Georgia";
-    src: url("../public/fonts/georgiab.ttf");
+    src: url("/fonts/georgiab.ttf");
   }
 
   @font-face {
     font-family: "Gotham";
-    src: url("../public/fonts/GothamMedium.ttf");
+    src: url("/fonts/GothamMedium.ttf");
+  }
+
+  @font-face {
+    font-family: "Gotham";
+    src: url("/fonts/GothamMedium.ttf");
   }
