@@ -13,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Carousel from './components/HomepageFeatures/Carousel';
+import logo from './assets/xyle-logo.png'
 
 export default function App() {
   useEffect(() => {
@@ -68,7 +69,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
+      <div className="div-3 relative overflow-x-clip bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
         <div data-aos="fade-down" className="text-center text-white font-georgia text-8xl mx-40">
           Our Brands
         </div>
@@ -191,6 +192,27 @@ export default function App() {
           </form>
         </div>
       </div>
+
+      <div className="footer font-gotham bg-cover bg-center text-[#928989] pt-48 pb-36 flex justify-center">
+      <div data-aos="fade-up" className="flex text-center w-full">
+        <div className="w-1/3 ml-36 mr-36 items-left text-center">
+          <img src={logo} alt="logo" className="w-[25rem]" />
+          <p className="text-md mt-2 font-black">USA | UK | India</p>
+        </div>
+        <div className="w-1/3 mx-96">
+          <h3 className="text-lg font-black">OUR BRANDS</h3>
+          <p className="text-md mt-2">Monetiseup</p>
+          <p className="text-md mt-2">ResponsIQ</p>
+        </div>
+        <div className="w-1/3 ml-36 mr-36">
+          <h3 className="text-lg font-black">COMPANY</h3>
+          <p className="text-md mt-2">Contact Us</p>
+          <p className="text-md mt-2">About Us</p>
+          <p className="text-md mt-2">Privacy</p>
+          <p className="text-md mt-2">Terms</p>
+        </div>
+      </div>
+    </div>
     </>
   );
 }

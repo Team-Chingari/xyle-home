@@ -10,6 +10,7 @@ export default {
         judson: ["Judson", "serif"],
         georgia: ["Georgia", "serif"],
         jaldi: ["Jaldi", "sans-serif"],
+        gotham: ["Gotham", "sans-serif"],
       },
     },
   },

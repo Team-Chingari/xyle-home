@@ -10,3 +10,8 @@
     font-family: "Georgia";
     src: url("../public/fonts/georgiab.ttf");
   }
+
+  @font-face {
+    font-family: "Gotham";
+    src: url("../public/fonts/GothamMedium.ttf");
+  }
