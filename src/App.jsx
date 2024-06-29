@@ -9,11 +9,11 @@ import div_7_img from "./assets/div-7-img.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Carousel from './components/HomepageFeatures/Carousel';
-import logo from './assets/xyle-logo.png'
+import "bootstrap/dist/css/bootstrap.min.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Carousel from "./components/HomepageFeatures/Carousel";
+import logo from "./assets/xyle-logo.png";
 
 export default function App() {
   useEffect(() => {
@@ -149,37 +149,42 @@ export default function App() {
       </div>
 
       <div className="div-4 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
-        <div className="text-center text-white font-arial text-8xl mx-40 my-20">
-          <span className="block font-bold font-gelasio text-9xl">
+        <div className="text-center font-georgia text-white font-arial text-8xl mx-40 my-20">
+          <span className="block font-bold text-9xl">
             Feel The Odds Fall
           </span>
-          <span className="block font-bold font-gelasio text-9xl">
+          <span className="block font-bold text-9xl">
             In Your Favour
           </span>
         </div>
         <div className="div42 flex justify-center text-center text-white w-full">
           <div className="relative w-full flex justify-center items-center">
-            <div className="absolute inset-0 w-full bg-white opacity-50"></div>
-            <div className="relative div42 flex justify-between text-center text-white px-16 py-5 w-full">
-              <div className="px-4">
-                <span className="block font-bold font-gelasio text-7xl px-48 p-2">
-                  150+
-                </span>
-                <span className="block font-arial text-3xl">Clients</span>
-              </div>
-              <div className="px-4">
-                <span className="block font-bold font-gelasio text-7xl px-48 p-2">
-                  320+
-                </span>
-                <span className="block font-arial text-3xl">Websites/Apps</span>
-              </div>
-              <div className="px-4 w-1/3">
-                <span className="block font-bold font-gelasio text-7xl px-48 p-2">
-                  95%
-                </span>
-                <span className="block font-arial text-3xl">
-                  Customer Retention
-                </span>
+            <div className="absolute inset-0 w-full bg-white blur-lg opacity-5"></div>
+            <div className="relative flex justify-center text-center text-white px-16 py-3 w-full">
+              <div className="absolute inset-0 w-full bg-white opacity-50"></div>
+              <div className="relative flex justify-between text-center text-white px-16 py-2 w-full max-w-7xl gap-">
+                <div className="px-4">
+                  <span className="block font-georgia font-bold text-7xl p-2">
+                    150+
+                  </span>
+                  <span className="block font-helvetica text-3xl">Clients</span>
+                </div>
+                <div className="px-4">
+                  <span className="block font-georgia font-bold text-7xl p-2">
+                    320+
+                  </span>
+                  <span className="block font-helvetica text-3xl">
+                    Websites/Apps
+                  </span>
+                </div>
+                <div className="px-4">
+                  <span className="block font-georgia font-bold text-7xl p-2">
+                    95%
+                  </span>
+                  <span className="block font-helvetica text-3xl">
+                    Customer Retention
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -188,29 +193,51 @@ export default function App() {
 
       <div className="div-5 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
         <div className="flex flex-col space-y-8">
-          <div data-aos="fade-up-right" className="text-center font-georgia text-6xl mb-8">
+          <div
+            data-aos="fade-up-right"
+            className="text-center font-georgia text-6xl mb-8"
+          >
             <div class=" opacity-20 relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-0 sm:w-full sm:max-w-lg">
               <div class=" px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                 <div class="sm:flex sm:items-start">
                   <div class=" mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                    <h3 class="text-base leading-6" id="modal-title">Advertisers</h3>
+                    <h3 class="text-base leading-6" id="modal-title">
+                      Advertisers
+                    </h3>
                     <div class="mt-2">
-                      <p class="text-sm"> “With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand”</p>
+                      <p class="text-sm">
+                        {" "}
+                        “With data as our compass, we navigate the media
+                        landscape, achieving resonance and impact for your
+                        brand”
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
-          <div data-aos="fade-up-left" className="text-center text-white font-georgia text-6xl">
+          <div
+            data-aos="fade-up-left"
+            className="text-center text-white font-georgia text-6xl"
+          >
             <div class="opacity-20 relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-10 sm:w-full sm:max-w-lg">
               <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                 <div class="sm:flex sm:items-start">
                   <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                    <h3 class="text-base leading-6 text-gray-900" id="modal-title">Publish</h3>
+                    <h3
+                      class="text-base leading-6 text-gray-900"
+                      id="modal-title"
+                    >
+                      Publish
+                    </h3>
                     <div class="mt-2">
-                      <p class="text-sm text-gray-500"> “With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand”</p>
+                      <p class="text-sm text-gray-500">
+                        {" "}
+                        “With data as our compass, we navigate the media
+                        landscape, achieving resonance and impact for your
+                        brand”
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -218,13 +245,11 @@ export default function App() {
             </div>
           </div>
         </div>
-
       </div>
-
 
       <div className="div-6 relative bg-cover bg-center min-h-screen flex items-center justify-center">
         <div className="text-center text-white py-40">
-          <span className="block font-bold font-gelasio text-9xl px-60">
+          <span className="block font-bold font-georgia text-9xl px-60">
             3Billion
           </span>
           <span className="block font-arial text-6xl">Impressions Monthly</span>
@@ -251,7 +276,7 @@ export default function App() {
 
       <div className="div-8 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
         <div className="text-white py-40">
-          <span className="block font-bold font-gelasio text-9xl px-60 ">
+          <span className="block font-bold font-georgia text-9xl px-60 ">
             Our Partners
           </span>
           <div className="container mt-12">
@@ -300,8 +325,8 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="div-9 relative bg-cover bg-center w-screen flex justify-between items-center p-48">
-        <p className="font-gelasio text-white bg-transparent text-9xl w-1/2">
+      <div className="div-9 relative bg-cover bg-center w-screen flex justify-center p-48">
+        <p className="font-georgia text-white mr-16 bg-transparent text-9xl w-1/2">
           Let&apos;s Get Acquainted
         </p>
         <div className="bg-[#FFFFFF] p-20 w-1/2 rounded-xl bg-opacity-25">
@@ -327,9 +352,9 @@ export default function App() {
             <textarea
               type="text"
               placeholder="Add Comments"
-              className="bg-[#FFFFFF] bg-opacity-20 p-3 h-40 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
+              className="bg-[#FFFFFF] bg-opacity-20 mb-5 p-3 h-40 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
             />
-            <button className="p-3 bg-[#FFFFFF] rounded-3xl w-fit text-2xl">
+            <button className="px-4 py-2 bg-[#FFFFFF] rounded-3xl w-fit text-2xl">
               SUBMIT
             </button>
           </form>
@@ -337,25 +362,25 @@ export default function App() {
       </div>
 
       <div className="footer font-gotham bg-cover bg-center text-[#928989] pt-48 pb-36 flex justify-center">
-      <div data-aos="fade-up" className="flex text-center w-full">
-        <div className="w-1/3 ml-36 mr-36 items-left text-center">
-          <img src={logo} alt="logo" className="w-[25rem]" />
-          <p className="text-md mt-2 font-black">USA | UK | India</p>
-        </div>
-        <div className="w-1/3 mx-96">
-          <h3 className="text-lg font-black">OUR BRANDS</h3>
-          <p className="text-md mt-2">Monetiseup</p>
-          <p className="text-md mt-2">ResponsIQ</p>
-        </div>
-        <div className="w-1/3 ml-36 mr-36">
-          <h3 className="text-lg font-black">COMPANY</h3>
-          <p className="text-md mt-2">Contact Us</p>
-          <p className="text-md mt-2">About Us</p>
-          <p className="text-md mt-2">Privacy</p>
-          <p className="text-md mt-2">Terms</p>
+        <div data-aos="fade-up" className="flex text-center w-full">
+          <div className="w-1/3 ml-36 mr-36 items-left text-center">
+            <img src={logo} alt="logo" className="w-[25rem]" />
+            <p className="text-md mt-2 font-black">USA | UK | India</p>
+          </div>
+          <div className="w-1/3 mx-96">
+            <h3 className="text-lg font-black">OUR BRANDS</h3>
+            <p className="text-md mt-2">Monetiseup</p>
+            <p className="text-md mt-2">ResponsIQ</p>
+          </div>
+          <div className="w-1/3 ml-36 mr-36">
+            <h3 className="text-lg font-black">COMPANY</h3>
+            <p className="text-md mt-2">Contact Us</p>
+            <p className="text-md mt-2">About Us</p>
+            <p className="text-md mt-2">Privacy</p>
+            <p className="text-md mt-2">Terms</p>
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 }
