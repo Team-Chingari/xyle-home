@@ -64,9 +64,7 @@ export default function App() {
         advertisers.style.transform = `translateX(${
           50 - scrollPercent * 150
         }%)`;
-        publishers.style.transform = `translateX(${
-          scrollPercent * 150 - 50
-        }%)`;
+        publishers.style.transform = `translateX(${scrollPercent * 150 - 50}%)`;
       } else {
         advertisers.style.transform = "translateX(100%)";
         publishers.style.transform = "translateX(-100%)";
@@ -233,21 +231,23 @@ export default function App() {
         </div>
       </div>
 
-      <div className="div-6 relative bg-cover bg-center min-h-screen flex items-center justify-center">
-        <div className="text-center text-white py-40">
-          <span className="block font-bold font-georgia text-9xl px-60">
-            3Billion
-          </span>
-          <span className="block font-arial text-6xl">Impressions Monthly</span>
+      <div className="div-6 relative bg-cover bg-center min-h-screen w-full flex flex-col items-center justify-center text-white">
+        <span className="block font-bold font-georgia text-9xl px-60 text-center">
+          3Billion
+        </span>
+        <span className="block font-arial text-6xl">Impressions Monthly</span>
 
-          <div className="relative py-40 mb-15">
-            <video className="h-full w-full rounded-lg" controls autoPlay>
-              <source src="" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            {/* <img src={graph_img} className={absolute transition-opacity duration-500 ${showCoins ? 'opacity-0' : 'opacity-100'}} alt='Graph' />
+        <div className="relative mb-15 w-10/12">
+          <video
+            className="h-full w-full bg-whtie rounded-lg my-32"
+            controls
+            autoPlay
+          >
+            <source src="" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* <img src={graph_img} className={absolute transition-opacity duration-500 ${showCoins ? 'opacity-0' : 'opacity-100'}} alt='Graph' />
             <img src={coins_img} className={absolute transition-opacity duration-500 ${showCoins ? 'opacity-100' : 'opacity-0'}} alt='Coins' /> */}
-          </div>
         </div>
       </div>
 
