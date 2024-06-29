@@ -6,9 +6,6 @@ import div_2_3_img from "./assets/div-2-3-img.png";
 import div_3_1_img from "./assets/div-3-1-img.png";
 import div_3_2_img from "./assets/div-3-2-img.png";
 import div_7_img from "./assets/div-7-img.png";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -52,6 +49,36 @@ export default function App() {
       designation: "CEO, ResponsIQ",
     },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const advertisers = document.querySelector(".advertisers");
+      const publishers = document.querySelector(".publishers");
+      const div5 = document.querySelector(".div-5");
+      const div5Rect = div5.getBoundingClientRect();
+
+      if (div5Rect.top < window.innerHeight && div5Rect.bottom > 0) {
+        const scrollPercent =
+          (window.innerHeight - div5Rect.top) /
+          (window.innerHeight + div5Rect.height);
+        advertisers.style.transform = `translateX(${
+          50 - scrollPercent * 150
+        }%)`;
+        publishers.style.transform = `translateX(${
+          scrollPercent * 150 - 50
+        }%)`;
+      } else {
+        advertisers.style.transform = "translateX(100%)";
+        publishers.style.transform = "translateX(-100%)";
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -150,12 +177,8 @@ export default function App() {
 
       <div className="div-4 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
         <div className="text-center font-georgia text-white font-arial text-8xl mx-40 my-20">
-          <span className="block font-bold text-9xl">
-            Feel The Odds Fall
-          </span>
-          <span className="block font-bold text-9xl">
-            In Your Favour
-          </span>
+          <span className="block font-bold text-9xl">Feel The Odds Fall</span>
+          <span className="block font-bold text-9xl">In Your Favour</span>
         </div>
         <div className="div42 flex justify-center text-center text-white w-full">
           <div className="relative w-full flex justify-center items-center">
@@ -191,59 +214,22 @@ export default function App() {
         </div>
       </div>
 
-      <div className="div-5 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
-        <div className="flex flex-col space-y-8">
-          <div
-            data-aos="fade-up-right"
-            className="text-center font-georgia text-6xl mb-8"
-          >
-            <div class=" opacity-20 relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-0 sm:w-full sm:max-w-lg">
-              <div class=" px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                <div class="sm:flex sm:items-start">
-                  <div class=" mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                    <h3 class="text-base leading-6" id="modal-title">
-                      Advertisers
-                    </h3>
-                    <div class="mt-2">
-                      <p class="text-sm">
-                        {" "}
-                        “With data as our compass, we navigate the media
-                        landscape, achieving resonance and impact for your
-                        brand”
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-aos="fade-up-left"
-            className="text-center text-white font-georgia text-6xl"
-          >
-            <div class="opacity-20 relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-10 sm:w-full sm:max-w-lg">
-              <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                <div class="sm:flex sm:items-start">
-                  <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                    <h3
-                      class="text-base leading-6 text-gray-900"
-                      id="modal-title"
-                    >
-                      Publish
-                    </h3>
-                    <div class="mt-2">
-                      <p class="text-sm text-gray-500">
-                        {" "}
-                        “With data as our compass, we navigate the media
-                        landscape, achieving resonance and impact for your
-                        brand”
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="div-5 bg-cover bg-center h-screen w-screen flex flex-col items-center justify-center space-y-10">
+        <div className="advertisers text-center p-6 bg-[#92898940] bg-opacity-20 text-[#FFFFFF] rounded-lg w-1/3">
+          <p className="font-georgia text-4xl">Advertisers</p>
+          <p className="font-helvetica text-lg mt-4 mb-12">
+            {
+              '"With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand"'
+            }
+          </p>
+        </div>
+        <div className="publishers text-center p-6 bg-[#92898940] bg-opacity-20 text-[#FFFFFF] rounded-lg w-1/3">
+          <p className="font-georgia text-4xl">Publishers</p>
+          <p className="font-helvetica text-lg mt-4 mb-12">
+            {
+              '"With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand"'
+            }
+          </p>
         </div>
       </div>
 
