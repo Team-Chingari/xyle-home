@@ -1,4 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+
 import "./App.css";
 import div_2_1_img from "./assets/div-2-1-img.png";
 import div_2_2_img from "./assets/div-2-2-img.png";
@@ -257,7 +263,43 @@ export default function App() {
           alt="some bg"
           className="absolute w-full h-full top-0 left-0 z-0 opacity-20"
         />
-        <Carousel items={carouselItems} />
+
+
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        {carouselItems.map((item, index) => (
+        <SwiperSlide key={index}>
+          <div className="bg-[#FFFFFF] bg-opacity-25 flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-full h-full shadow-2xl">
+            <p className="px-16 text-white text-3xl text-center">
+              {item.quote}
+            </p>
+            <div className="w-full flex justify-end mt-2">
+              <div className="text-xl">
+                <p className="text-white">{item.author}</p>
+                <p className="text-gray-300">{item.designation}</p>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+
+      </Swiper>
+
+        {/* <Carousel2 items={carouselItems} /> */}
       </div>
 
       <div className="div-8 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
