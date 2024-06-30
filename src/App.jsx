@@ -365,24 +365,24 @@ export default function App() {
             <input
               type="text"
               placeholder="Name"
-              className="bg-[#FFFFFF] bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
+              className="bg-[#FFFFFF] font-gotham bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
             />
             <input
               type="text"
               placeholder="Email"
-              className="bg-[#FFFFFF] bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
+              className="bg-[#FFFFFF] font-gotham bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
             />
             <input
               type="text"
               placeholder="Mobile Number"
-              className="bg-[#FFFFFF] bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
+              className="bg-[#FFFFFF] font-gotham bg-opacity-20 p-3 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
             />
             <textarea
               type="text"
               placeholder="Add Comments"
-              className="bg-[#FFFFFF] bg-opacity-20 mb-5 p-3 h-40 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
+              className="bg-[#FFFFFF] font-gotham bg-opacity-20 mb-5 p-3 h-40 rounded-2xl w-full text-[#2B4150] placeholder:text-[#2B4150]"
             />
-            <button className="px-4 py-2 bg-[#FFFFFF] rounded-3xl w-fit text-2xl">
+            <button className="px-4 py-2 bg-[#FFFFFF] rounded-3xl w-fit text-2xl text-[#2B4150]">
               SUBMIT
             </button>
           </form>
