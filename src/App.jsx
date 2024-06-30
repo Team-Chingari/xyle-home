@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import 'swiper/css/navigation';
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 import "./App.css";
 import div_2_1_img from "./assets/div-2-1-img.png";
@@ -45,6 +46,18 @@ export default function App() {
     {
       quote:
         '"Vidit Kothari, why you gotta suck so much butt? Stop crapping everywhere you go, what is this Pranav Dhawan behaviour?"',
+      author: "Sumedha",
+      designation: "CEO, ResponsIQ",
+    },
+    {
+      quote:
+        '"Pranav Dhawan - khali kanastar, tum kuch karte hi toh nahi ho, yahi toh dikkat hai? Bring your dairy."',
+      author: "Sumedha",
+      designation: "CEO, ResponsIQ",
+    },
+    {
+      quote:
+        '"Pranav Dhawan - khali kanastar, tum kuch karte hi toh nahi ho, yahi toh dikkat hai? Bring your dairy."',
       author: "Sumedha",
       designation: "CEO, ResponsIQ",
     },
@@ -124,7 +137,7 @@ export default function App() {
 
       <div className="div-2 relative bg-cover bg-center min-h-screen flex ">
         <div
-          className="div-2-1 w-1/2 h-full text-white font-jaldi text-6xl p-36 pr-30 leading-relaxed"
+          className="div-2-1 w-1/2 h-full text-white font-jaldi text-6xl p-36 pr-20 leading-tight"
           data-aos="fade-right"
         >
           Transforming ideas into media marvels, we&apos;re a dedicated agency
@@ -168,13 +181,13 @@ export default function App() {
             data-aos="fade-right"
             src={div_3_1_img}
             alt="Brand 1"
-            className="w-[55rem]"
+            className="w-[40rem]"
           />
           <img
             data-aos="fade-left"
             src={div_3_2_img}
             alt="Brand 2"
-            className="w-[55rem]"
+            className="w-[40rem]"
           />
         </div>
       </div>
@@ -219,6 +232,12 @@ export default function App() {
       </div>
 
       <div className="div-5 bg-cover bg-center h-screen w-screen flex flex-col items-center justify-center space-y-10">
+      <div
+          data-aos="fade-down"
+          className="text-center text-white font-georgia text-8xl mx-40 my-10"
+        >
+          Our Units
+        </div>
         <div className="advertisers text-center p-6 bg-[#92898940] bg-opacity-20 text-[#FFFFFF] rounded-lg w-1/3">
           <p className="font-georgia text-4xl">Advertisers</p>
           <p className="font-helvetica text-lg mt-4 mb-12">
@@ -266,19 +285,21 @@ export default function App() {
 
 
       <Swiper
+        // spaceBetween={30}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={'auto'}
+        slidesPerView={3}
         coverflowEffect={{
-          rotate: 50,
+          rotate: 0,
           stretch: 0,
           depth: 100,
-          modifier: 1,
+          modifier: 3,
           slideShadows: true,
         }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        // loop={true}
+        navigation={true}
+        modules={[EffectCoverflow, Navigation, Pagination]}
         className="mySwiper"
       >
         {carouselItems.map((item, index) => (
@@ -354,7 +375,7 @@ export default function App() {
         </div>
       </div>
       <div className="div-9 relative bg-cover bg-center w-screen flex justify-center p-48">
-        <p className="font-georgia text-white mr-16 bg-transparent text-9xl w-1/2">
+        <p className="font-georgia text-white mr-16 bg-transparent text-8xl w-1/2">
           Let&apos;s Get Acquainted
         </p>
         <div className="bg-[#FFFFFF] p-20 w-1/2 rounded-xl bg-opacity-25">
