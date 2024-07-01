@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -16,7 +16,6 @@ import div_7_img from "./assets/div-7-img.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Carousel from "./components/HomepageFeatures/Carousel";
 import logo from "./assets/xyle-logo.png";
 
 export default function App() {
