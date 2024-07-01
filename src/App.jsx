@@ -114,7 +114,7 @@ export default function App() {
           <span
             data-aos="fade-up"
             data-aos-delay="100"
-            className="block font-judson text-9xl"
+            className="block font-judson text-9xl -mt-2"
           >
             Advertisers
           </span>
@@ -128,7 +128,7 @@ export default function App() {
           <span
             data-aos="fade-up"
             data-aos-delay="200"
-            className="block font-judson text-9xl"
+            className="block font-judson text-9xl -mt-2"
           >
             Brands
           </span>
@@ -137,7 +137,7 @@ export default function App() {
 
       <div className="div-2 relative bg-cover bg-center min-h-screen flex ">
         <div
-          className="div-2-1 w-1/2 h-full text-white font-jaldi text-6xl p-36 pr-20 leading-tight"
+          className="div-2-1 w-1/2 h-full text-white font-jaldi text-[4.61rem] p-36 pr-20 leading-tight"
           data-aos="fade-right"
         >
           Transforming ideas into media marvels, we&apos;re a dedicated agency
@@ -171,7 +171,7 @@ export default function App() {
 
       <div className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
         <div
-          data-aos="fade-down"
+          data-aos="fade-down" data-aos-offset="200"
           className="text-center text-white font-georgia text-8xl mx-40"
         >
           Our Brands
