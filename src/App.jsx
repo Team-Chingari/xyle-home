@@ -79,9 +79,8 @@ export default function App() {
         const scrollPercent =
           (window.innerHeight - div5Rect.top) /
           (window.innerHeight + div5Rect.height);
-        advertisers.style.transform = `translateX(${
-          50 - scrollPercent * 150
-        }%)`;
+        advertisers.style.transform = `translateX(${50 - scrollPercent * 150
+          }%)`;
         publishers.style.transform = `translateX(${scrollPercent * 150 - 50}%)`;
       } else {
         advertisers.style.transform = "translateX(100%)";
@@ -231,7 +230,7 @@ export default function App() {
       </div>
 
       <div className="div-5 bg-cover bg-center h-screen w-screen flex flex-col items-center justify-center space-y-10">
-      <div
+        <div
           data-aos="fade-down"
           className="text-center text-white font-georgia text-8xl mx-40 my-10"
         >
@@ -261,20 +260,20 @@ export default function App() {
         </span>
         <span className="block font-arial text-6xl">Impressions Monthly</span>
 
-        <div className="relative mb-15 w-10/12">
-          <video
-            className="h-full w-full bg-whtie rounded-lg my-32"
-            controls
-            autoPlay
-          >
-            <source src="" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          {/* <img src={graph_img} className={absolute transition-opacity duration-500 ${showCoins ? 'opacity-0' : 'opacity-100'}} alt='Graph' />
-            <img src={coins_img} className={absolute transition-opacity duration-500 ${showCoins ? 'opacity-100' : 'opacity-0'}} alt='Coins' /> */}
+        <div className="relative mb-15 w-10/12 flex justify-center">
+          <iframe
+            src="https://drive.google.com/file/d/14cPhQ8YeV3yVWajMJKC2MOasTDp7Fs__/preview"
+            width="1408" // Adjusted width for better visibility
+            height="792" // Adjusted height for better aspect ratio
+            allow="autoplay"
+            className="bg-[#2B4150] rounded-lg my-32"
+          ></iframe>
         </div>
       </div>
 
+
+      {/* <img src={graph_img} className={absolute transition-opacity duration-500 ${showCoins ? 'opacity-0' : 'opacity-100'}} alt='Graph' />
+            <img src={coins_img} className={absolute transition-opacity duration-500 ${showCoins ? 'opacity-100' : 'opacity-0'}} alt='Coins' /> */}
       <div className="relative bg-black py-40 overflow-x-clip flex flex-col items-center justify-center h-screen">
         <img
           src={div_7_img}
@@ -283,41 +282,41 @@ export default function App() {
         />
 
 
-      <Swiper
-        // spaceBetween={30}
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={3}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 3,
-          slideShadows: true,
-        }}
-        // loop={true}
-        navigation={true}
-        modules={[EffectCoverflow, Navigation, Pagination]}
-        className="mySwiper"
-      >
-        {carouselItems.map((item, index) => (
-        <SwiperSlide key={index}>
-          <div className="bg-[#FFFFFF] bg-opacity-25 flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-full h-full shadow-2xl">
-            <p className="px-16 text-white text-3xl text-center">
-              {item.quote}
-            </p>
-            <div className="w-full flex justify-end mt-2">
-              <div className="text-xl">
-                <p className="text-white">{item.author}</p>
-                <p className="text-gray-300">{item.designation}</p>
+        <Swiper
+          // spaceBetween={30}
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={3}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 3,
+            slideShadows: true,
+          }}
+          // loop={true}
+          navigation={true}
+          modules={[EffectCoverflow, Navigation, Pagination]}
+          className="mySwiper"
+        >
+          {carouselItems.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-[#FFFFFF] bg-opacity-25 flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-full h-full shadow-2xl">
+                <p className="px-16 text-white text-3xl text-center">
+                  {item.quote}
+                </p>
+                <div className="w-full flex justify-end mt-2">
+                  <div className="text-xl">
+                    <p className="text-white">{item.author}</p>
+                    <p className="text-gray-300">{item.designation}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
+            </SwiperSlide>
+          ))}
 
-      </Swiper>
+        </Swiper>
 
         {/* <Carousel2 items={carouselItems} /> */}
       </div>
