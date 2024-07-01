@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 import "./App.css";
 import div_2_1_img from "./assets/div-2-1-img.png";
@@ -231,7 +231,7 @@ export default function App() {
       </div>
 
       <div className="div-5 bg-cover bg-center h-screen w-screen flex flex-col items-center justify-center space-y-10">
-      <div
+        <div
           data-aos="fade-down"
           className="text-center text-white font-georgia text-8xl mx-40 my-10"
         >
@@ -282,94 +282,60 @@ export default function App() {
           className="absolute w-full h-full top-0 left-0 z-0 opacity-20"
         />
 
-
-      <Swiper
-        // spaceBetween={30}
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={3}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 3,
-          slideShadows: true,
-        }}
-        // loop={true}
-        navigation={true}
-        modules={[EffectCoverflow, Navigation, Pagination]}
-        className="mySwiper"
-      >
-        {carouselItems.map((item, index) => (
-        <SwiperSlide key={index}>
-          <div className="bg-[#FFFFFF] bg-opacity-25 flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-full h-full shadow-2xl">
-            <p className="px-16 text-white text-3xl text-center">
-              {item.quote}
-            </p>
-            <div className="w-full flex justify-end mt-2">
-              <div className="text-xl">
-                <p className="text-white">{item.author}</p>
-                <p className="text-gray-300">{item.designation}</p>
+        <Swiper
+          // spaceBetween={30}
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={3}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 3,
+            slideShadows: true,
+          }}
+          // loop={true}
+          navigation={true}
+          modules={[EffectCoverflow, Navigation, Pagination]}
+          className="mySwiper"
+        >
+          {carouselItems.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-[#FFFFFF] bg-opacity-25 flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-full h-full shadow-2xl">
+                <p className="px-16 text-white text-3xl text-center">
+                  {item.quote}
+                </p>
+                <div className="w-full flex justify-end mt-2">
+                  <div className="text-xl">
+                    <p className="text-white">{item.author}</p>
+                    <p className="text-gray-300">{item.designation}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
         {/* <Carousel2 items={carouselItems} /> */}
       </div>
 
       <div className="div-8 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
-        <div className="text-white py-40">
-          <span className="block font-bold font-georgia text-9xl px-60 ">
-            Our Partners
-          </span>
-          <div className="container mt-12">
-            <div className="row row-cols-2 row-cols-lg-4 g-2 g-lg-1">
-              <div className="col">
-                <div className="p-3">
-                  <img src="/google.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="/amazon.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="appnexus.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="/cnn.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="/cnbc.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="/indexexchange.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="msn.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="espn.png" alt="" />
-                </div>
-              </div>
-            </div>
+        <span className="block font-bold font-georgia text-8xl text-white">
+          Our Partners
+        </span>
+        <div className="w-3/4 flex flex-col gap-y-8 items-center justify-center border-t-2 border-opacity-10 border-white mt-24">
+          <div className="w-full flex items-center justify-between px-24">
+            <img src="/google.png" className="w-36"/>
+            <img src="/amazon.png" className="w-36"/>
+            <img src="/cnbc.png" className="w-56"/>
+            <img src="/cnn.png" className="w-44"/>
+          </div>
+          <div className="w-full flex items-center justify-between px-24">
+            <img src="/bbc.png" className="w-36"/>
+            <img src="/indexexchange.png" className="w-36"/>
+            <img src="/msn.png" className="w-56"/>
+            <img src="/espn.png" className="w-44"/>
           </div>
         </div>
       </div>
