@@ -7,6 +7,12 @@
   z-index: 2;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: #2B4150; /* Set your placeholder color */
+  opacity: 1; /* Ensure the placeholder text is fully opaque */
+}
+
 .div-2 {
   background-image: url(assets/div-2-img.png);
 }
@@ -61,6 +67,10 @@
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.in {
+  font-family: "Gotham";
 }
 
 .swiper-slide {
