@@ -171,7 +171,7 @@ export default function App() {
       <div className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
         <div
           data-aos="fade-down" data-aos-offset="200"
-          className="text-center text-white font-georgia text-8xl mx-40"
+          className="text-center text-white font-georgia text-8xl mx-40 my-10"
         >
           Our Brands
         </div>
@@ -180,40 +180,40 @@ export default function App() {
             data-aos="fade-right"
             src={div_3_1_img}
             alt="Brand 1"
-            className="w-[40rem]"
+            className="w-[36rem]"
           />
           <img
             data-aos="fade-left"
             src={div_3_2_img}
             alt="Brand 2"
-            className="w-[40rem]"
+            className="w-[36rem]"
           />
         </div>
       </div>
 
       <div className="div-4 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
         <div className="text-center font-georgia text-white font-arial text-8xl mx-40 my-20">
-          <span className="block font-bold text-9xl">Feel The Odds Fall</span>
-          <span className="block font-bold text-9xl">In Your Favour</span>
+          <span className="block font-bold text-9xl">Some Key Achievements</span>
+          {/* <span className="block font-bold text-9xl">In Your Favour</span> */}
         </div>
         <div className="div42 flex justify-center text-center text-white w-full">
           <div className="relative w-full flex justify-center items-center">
             <div className="absolute inset-0 w-full bg-white blur-lg opacity-5"></div>
             <div className="relative flex justify-center text-center text-white px-16 py-3 w-full">
-              <div className="absolute inset-0 w-full bg-white opacity-50"></div>
+              <div className="absolute inset-0 w-full bg-white opacity-25"></div>
               <div className="relative flex justify-between text-center text-white px-16 py-2 w-full max-w-7xl gap-">
                 <div className="px-4">
                   <span className="block font-georgia font-bold text-7xl p-2">
-                    150+
+                  100+
                   </span>
-                  <span className="block font-helvetica text-3xl">Clients</span>
+                  <span className="block font-helvetica text-3xl">Brands Served</span>
                 </div>
                 <div className="px-4">
                   <span className="block font-georgia font-bold text-7xl p-2">
-                    320+
+                    50+
                   </span>
                   <span className="block font-helvetica text-3xl">
-                    Websites/Apps
+                  SSPs & DSPs Partnered
                   </span>
                 </div>
                 <div className="px-4">
@@ -221,7 +221,7 @@ export default function App() {
                     95%
                   </span>
                   <span className="block font-helvetica text-3xl">
-                    Customer Retention
+                  Performance Delivered
                   </span>
                 </div>
               </div>
@@ -235,7 +235,7 @@ export default function App() {
           data-aos="fade-down"
           className="text-center text-white font-georgia text-8xl mx-40 my-10"
         >
-          Our Units
+          Our Functions
         </div>
         <div className="advertisers text-center p-6 bg-[#92898940] bg-opacity-20 text-[#FFFFFF] rounded-lg w-1/3">
           <p className="font-georgia text-4xl">Advertisers</p>
@@ -350,8 +350,8 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="div-9 relative bg-cover bg-center w-screen flex justify-center p-48">
-        <p className="font-georgia text-white mr-16 bg-transparent text-8xl w-1/2">
+      <div className="div-9 relative bg-cover bg-center w-screen flex justify-center items-center p-48">
+        <p className="font-georgia text-white mr-16 bg-transparent text-8xl  w-1/2">
           Let&apos;s Get Acquainted
         </p>
         <div className="bg-[#FFFFFF] p-20 w-1/2 rounded-xl bg-opacity-25">
@@ -386,13 +386,13 @@ export default function App() {
         </div>
       </div>
 
-      <div className="footer font-gotham bg-cover bg-center text-[#928989] pt-48 pb-36 flex justify-center">
+      <div className="footer font-gotham bg-cover bg-center text-[#ffffff] pt-48 pb-36 flex justify-center">
         <div data-aos="fade-up" className="flex text-center w-full">
           <div className="w-1/3 ml-36 mr-36 items-left text-center">
             <img src={logo} alt="logo" className="w-[25rem]" />
             <p className="text-md mt-2 font-black">USA | UK | India</p>
           </div>
-          <div className="w-1/3 mx-96">
+          <div className="w-1/3 mx-72">
             <h3 className="text-lg font-black">OUR BRANDS</h3>
             <p className="text-md mt-2">Monetiseup</p>
             <p className="text-md mt-2">ResponsIQ</p>
