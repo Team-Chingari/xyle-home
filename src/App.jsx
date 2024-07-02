@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-
+import { useState, useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import "./App.css";
 import div_2_1_img from "./assets/div-2-1-img.png";
 import div_2_2_img from "./assets/div-2-2-img.png";
@@ -19,6 +19,7 @@ import "aos/dist/aos.css";
 import logo from "./assets/xyle-logo.png";
 
 export default function App() {
+  const swiperRef = useRef(null);
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -112,7 +113,7 @@ export default function App() {
           <span
             data-aos="fade-up"
             data-aos-delay="100"
-            className="block font-judson text-9xl"
+            className="block font-judson text-9xl -mt-2"
           >
             Advertisers
           </span>
@@ -126,7 +127,7 @@ export default function App() {
           <span
             data-aos="fade-up"
             data-aos-delay="200"
-            className="block font-judson text-9xl"
+            className="block font-judson text-9xl -mt-2"
           >
             Brands
           </span>
@@ -169,7 +170,7 @@ export default function App() {
 
       <div className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
         <div
-          data-aos="fade-down"
+          data-aos="fade-down" data-aos-offset="200"
           className="text-center text-white font-georgia text-8xl mx-40"
         >
           Our Brands
@@ -271,20 +272,16 @@ export default function App() {
         </div>
       </div>
 
-
-      {/* <img src={graph_img} className={absolute transition-opacity duration-500 ${showCoins ? 'opacity-0' : 'opacity-100'}} alt='Graph' />
-            <img src={coins_img} className={absolute transition-opacity duration-500 ${showCoins ? 'opacity-100' : 'opacity-0'}} alt='Coins' /> */}
-      <div className="relative bg-black py-40 overflow-x-clip flex flex-col items-center justify-center h-screen">
+      <div className="relative bg-black overflow-x-clip flex flex-col items-center justify-center h-screen">
         <img
           src={div_7_img}
           alt="some bg"
           className="absolute w-full h-full top-0 left-0 z-0 opacity-20"
         />
 
-
         <Swiper
           // spaceBetween={30}
-          effect={'coverflow'}
+          effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={3}
@@ -296,7 +293,7 @@ export default function App() {
             slideShadows: true,
           }}
           // loop={true}
-          navigation={true}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           modules={[EffectCoverflow, Navigation, Pagination]}
           className="mySwiper"
         >
@@ -315,60 +312,41 @@ export default function App() {
               </div>
             </SwiperSlide>
           ))}
-
         </Swiper>
 
         {/* <Carousel2 items={carouselItems} /> */}
+        <div className="flex space-x-4">
+          <button
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="bg-white bg-opacity-25 rounded-full p-2 hover:bg-opacity-40 transition-all z-20"
+          >
+            <ChevronLeft className="text-white" size={24} />
+          </button>
+          <button
+            onClick={() => swiperRef.current?.slideNext()}
+            className="bg-white bg-opacity-25 rounded-full p-2 hover:bg-opacity-40 transition-all z-20"
+          >
+            <ChevronRight className="text-white" size={24} />
+          </button>
+        </div>
       </div>
 
       <div className="div-8 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
-        <div className="text-white py-40">
-          <span className="block font-bold font-georgia text-9xl px-60 ">
-            Our Partners
-          </span>
-          <div className="container mt-12">
-            <div className="row row-cols-2 row-cols-lg-4 g-2 g-lg-1">
-              <div className="col">
-                <div className="p-3">
-                  <img src="/google.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="/amazon.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="appnexus.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="/cnn.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="/cnbc.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="/indexexchange.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="msn.png" alt="" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="p-3">
-                  <img src="espn.png" alt="" />
-                </div>
-              </div>
-            </div>
+        <span className="block font-bold font-georgia text-8xl text-white">
+          Our Partners
+        </span>
+        <div className="w-3/4 flex flex-col gap-y-8 items-center justify-center border-t-2 border-opacity-10 border-white mt-24">
+          <div className="w-full flex items-center justify-between px-24">
+            <img src="/google.png" className="w-36" />
+            <img src="/amazon.png" className="w-36" />
+            <img src="/cnbc.png" className="w-56" />
+            <img src="/cnn.png" className="w-44" />
+          </div>
+          <div className="w-full flex items-center justify-between px-24">
+            <img src="/bbc.png" className="w-36" />
+            <img src="/indexexchange.png" className="w-36" />
+            <img src="/msn.png" className="w-56" />
+            <img src="/espn.png" className="w-44" />
           </div>
         </div>
       </div>
