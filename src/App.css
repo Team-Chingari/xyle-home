@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 .div-1 {
   background-image: url(assets/div-1-img.png);
 }
-
 .div-1 > * {
   position: relative;
   z-index: 2;
@@ -67,10 +68,6 @@ textarea::placeholder {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-}
-
-.in {
-  font-family: "Montserrat";
 }
 
 .swiper-slide {
