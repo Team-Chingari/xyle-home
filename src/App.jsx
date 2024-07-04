@@ -388,16 +388,16 @@ export default function App() {
 
       <div className="footer font-gotham bg-cover bg-center text-[#ffffff] pt-48 pb-36 flex justify-center">
         <div data-aos="fade-up" className="flex text-center w-full">
-          <div className="w-1/3 ml-36 mr-36 items-left text-center">
-            <img src={logo} alt="logo" className="w-[25rem]" />
-            <p className="text-md mt-2 font-black">USA | UK | India</p>
+          <div className="w-1/3 flex flex-col items-center text-center">
+            <img src={logo} alt="logo" className="w-1/3" />
+            <p className="w-full text-md mt-2 font-black">USA | UK | India</p>
           </div>
-          <div className="w-1/3 mx-72">
+          <div className="w-1/3">
             <h3 className="text-lg font-black">OUR BRANDS</h3>
-            <p className="text-md mt-2">Monetiseup</p>
+            <a target="_blank" href="https://monetiseup.com/"><p className="text-md mt-2">Monetiseup</p></a>
             <p className="text-md mt-2">ResponsIQ</p>
           </div>
-          <div className="w-1/3 ml-36 mr-36">
+          <div className="w-1/3">
             <h3 className="text-lg font-black">COMPANY</h3>
             <p className="text-md mt-2">Contact Us</p>
             <p className="text-md mt-2">About Us</p>
