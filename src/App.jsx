@@ -288,7 +288,7 @@ export default function App() {
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 100,
+            depth: 250,
             modifier: 3,
             slideShadows: true,
           }}
