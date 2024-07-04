@@ -299,7 +299,7 @@ export default function App() {
         >
           {carouselItems.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[#FFFFFF] bg-opacity-25 flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-full h-full shadow-2xl">
+              <div className="bg-[#FFFFFF] bg-opacity-25 flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-full h-full shadow-2xl border-white border-3">
                 <p className="px-16 text-white text-3xl text-center">
                   {item.quote}
                 </p>
