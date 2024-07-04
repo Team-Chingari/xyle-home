@@ -35,7 +35,7 @@ textarea::placeholder {
 }
 
 .div-7 {
-  /* background-image: url(assets/div-7-img.png); */
+  background-image: url(assets/div-7-img.png);
   background-color: black;
 }
 
@@ -77,3 +77,14 @@ textarea::placeholder {
   height: 500px;
 }
 
+.active-slide {
+  border: 3px solid white;
+  box-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+}
+
+.overlay-background {
+  background-color: rgba(255, 255, 255, 0.2); 
+}

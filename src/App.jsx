@@ -12,7 +12,6 @@ import div_2_2_img from "./assets/div-2-2-img.png";
 import div_2_3_img from "./assets/div-2-3-img.png";
 import div_3_1_img from "./assets/div-3-1-img.png";
 import div_3_2_img from "./assets/div-3-2-img.png";
-import div_7_img from "./assets/div-7-img.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -27,6 +26,7 @@ export default function App() {
   }, []);
 
   const [animationDirection, setAnimationDirection] = useState("");
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   useEffect(() => {
     if (animationDirection !== "") {
@@ -255,76 +255,71 @@ export default function App() {
         </div>
       </div>
 
-      <div className="div-6 relative bg-cover bg-center min-h-screen w-full flex flex-col items-center justify-center text-white">
-        <span className="block font-bold font-georgia text-9xl px-60 text-center">
+      <div className="div-6 relative bg-cover bg-center w-full flex flex-col items-center justify-center text-white">
+        <span className="block font-bold font-georgia text-9xl px-60 text-center z-10">
           3Billion
         </span>
-        <span className="block font-arial text-6xl">Impressions Monthly</span>
+        <span className="block font-arial text-6xl z-10">Impressions Monthly</span>
 
-        <div className="relative mb-15 w-10/12 flex justify-center">
+        <div className="relative mb-15 w-10/12 flex justify-center z-10">
           <iframe
             src="https://drive.google.com/file/d/14cPhQ8YeV3yVWajMJKC2MOasTDp7Fs__/preview"
-            width="1408" // Adjusted width for better visibility
-            height="792" // Adjusted height for better aspect ratio
+            width="1408" 
+            height="792" 
             allow="autoplay"
             className="bg-[#2B4150] rounded-lg my-32"
           ></iframe>
         </div>
-      </div>
-
-      <div className="relative bg-black overflow-x-clip flex flex-col items-center justify-center h-screen">
-        <img
-          src={div_7_img}
-          alt="some bg"
-          className="absolute w-full h-full top-0 left-0 z-0 opacity-20"
-        />
 
         <Swiper
-          // spaceBetween={30}
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={3}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 250,
-            modifier: 3,
-            slideShadows: true,
-          }}
-          // loop={true}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-          modules={[EffectCoverflow, Navigation, Pagination]}
-          className="mySwiper"
-        >
-          {carouselItems.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-[#FFFFFF] bg-opacity-25 flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-full h-full shadow-2xl border-white border-3">
-                <p className="px-16 text-white text-3xl text-center">
-                  {item.quote}
-                </p>
-                <div className="w-full flex justify-end mt-2">
-                  <div className="text-xl">
-                    <p className="text-white">{item.author}</p>
-                    <p className="text-gray-300">{item.designation}</p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+  effect={"coverflow"}
+  grabCursor={true}
+  centeredSlides={true}
+  slidesPerView={1}
+  coverflowEffect={{
+    rotate: 0,
+    stretch: 0,
+    depth: 300,
+    modifier: 3,
+    slideShadows: false,
+  }}
+  onSwiper={(swiper) => (swiperRef.current = swiper)}
+  onSlideChange={(swiper) => {
+    setActiveSlideIndex(swiper.activeIndex);
+  }}
+  modules={[EffectCoverflow, Navigation, Pagination]}
+>
+  {carouselItems.map((item, index) => (
+    <SwiperSlide
+      key={index}
+      className={`flex items-center justify-center`}
+    >
+      <div className={`flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-[80%] h-[50%] ${
+        activeSlideIndex === index ? "active-slide" : "overlay-background"
+      }`}>
+        <p className="px-16 text-white text-3xl text-center">{item.quote}</p>
+        <div className="w-full flex justify-end mt-2">
+          <div className="text-xl">
+            <p className="text-white text-2xl">{item.author}</p>
+            <p className="text-gray-300">{item.designation}</p>
+          </div>
+        </div>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
 
-        {/* <Carousel2 items={carouselItems} /> */}
-        <div className="flex space-x-4">
+
+        <div className="flex space-x-4 z-10 pb-[20rem]">
           <button
             onClick={() => swiperRef.current?.slidePrev()}
-            className="bg-white bg-opacity-25 rounded-full p-2 hover:bg-opacity-40 transition-all z-20"
+            className="bg-white bg-opacity-25 rounded-full p-2 hover:bg-opacity-40 transition-all"
           >
             <ChevronLeft className="text-white" size={24} />
           </button>
           <button
             onClick={() => swiperRef.current?.slideNext()}
-            className="bg-white bg-opacity-25 rounded-full p-2 hover:bg-opacity-40 transition-all z-20"
+            className="bg-white bg-opacity-25 rounded-full p-2 hover:bg-opacity-40 transition-all"
           >
             <ChevronRight className="text-white" size={24} />
           </button>
