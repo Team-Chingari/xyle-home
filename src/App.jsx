@@ -13,6 +13,8 @@ import div_2_3_img from "./assets/div-2-3-img.png";
 import div_3_1_img from "./assets/div-3-1-img.png";
 import div_3_2_img from "./assets/div-3-2-img.png";
 import div_5_1_img from "./assets/div-5-1-img.png";
+import div_7_img from "./assets/div-7-img.png";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -189,7 +191,7 @@ export default function App() {
 
       <div id='brands' className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center">
         <video src={videoBg1} autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
-        <div className="h-[50%] space-y-32">
+        <div className="h-[50%] space-y-32 z-10">
 
           <div
             data-aos="fade-down" data-aos-offset="200"
@@ -227,7 +229,7 @@ export default function App() {
               <div className="relative flex justify-between text-center text-white px-16 py-2 w-full max-w-7xl gap-">
                 <div className="px-4">
                   <span className="block font-georgia font-bold text-7xl p-2">
-                  150+
+                    150+
                   </span>
                   <span className="block font-helvetica text-3xl">Clients</span>
                 </div>
@@ -271,47 +273,48 @@ export default function App() {
         <span className="block font-arial text-6xl relative z-10">Impressions Monthly</span>
       </div>
 
-        <div className="div-7 relative mb-15 w-10/12 flex justify-center z-10">
-
+      <div className="relative overflow-x-clip flex flex-col items-center justify-center">
+        <img
+          src={div_7_img}
+          alt="some bg"
+          className="absolute w-full h-full top-0 left-0 z-0"
+        />
         <Swiper
-  effect={"coverflow"}
-  grabCursor={true}
-  centeredSlides={true}
-  slidesPerView={1}
-  initialSlide={1}
-  coverflowEffect={{
-    rotate: 0,
-    stretch: 0,
-    depth: 300,
-    modifier: 3,
-    slideShadows: false,
-  }}
-  onSwiper={(swiper) => (swiperRef.current = swiper)}
-  onSlideChange={(swiper) => {
-    setActiveSlideIndex(swiper.activeIndex);
-  }}
-  modules={[EffectCoverflow, Navigation, Pagination]}
->
-  {carouselItems.map((item, index) => (
-    <SwiperSlide
-      key={index}
-      className={`flex items-center justify-center`}
-    >
-      <div className={`flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-[80%] h-[50%] ${
-        activeSlideIndex === index ? "active-slide" : "overlay-background"
-      }`}>
-        <p className="px-16 text-white text-3xl text-center">{item.quote}</p>
-        <div className="w-full flex justify-end mt-2">
-          <div className="text-xl">
-            <p className="text-white text-2xl">{item.author}</p>
-            <p className="text-gray-300">{item.designation}</p>
-          </div>
-        </div>
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
-
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={1}
+          initialSlide={1}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 300,
+            modifier: 3,
+            slideShadows: false,
+          }}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onSlideChange={(swiper) => {
+            setActiveSlideIndex(swiper.activeIndex);
+          }}
+          modules={[EffectCoverflow, Navigation, Pagination]}
+        >
+          {carouselItems.map((item, index) => (
+            <SwiperSlide key={index} className="flex items-center justify-center">
+              <div
+                className={`flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-[80%] h-[50%] ${activeSlideIndex === index ? "active-slide" : "overlay-background"
+                  }`}
+              >
+                <p className="px-16 text-white text-3xl text-center">{item.quote}</p>
+                <div className="w-full flex justify-end mt-2">
+                  <div className="text-xl">
+                    <p className="text-white text-2xl">{item.author}</p>
+                    <p className="text-gray-300">{item.designation}</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
         <div className="flex space-x-4 z-10 pb-[20rem]">
           <button
