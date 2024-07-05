@@ -12,11 +12,14 @@ import div_2_2_img from "./assets/div-2-2-img.png";
 import div_2_3_img from "./assets/div-2-3-img.png";
 import div_3_1_img from "./assets/div-3-1-img.png";
 import div_3_2_img from "./assets/div-3-2-img.png";
+import div_5_1_img from "./assets/div-5-1-img.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import logo from "./assets/xyle-logo.png";
 import navbar_logo from "./assets/xyle-navbar-logo.png";
+import videoBg1 from "./assets/vid.mp4";
+import videoBg2 from "./assets/globe.mp4";
 
 export default function App() {
   const swiperRef = useRef(null);
@@ -27,7 +30,7 @@ export default function App() {
   }, []);
 
   const [animationDirection, setAnimationDirection] = useState("");
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(1);
 
   useEffect(() => {
     if (animationDirection !== "") {
@@ -185,27 +188,29 @@ export default function App() {
       </div>
 
       <div id='brands' className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center">
+        <video src={videoBg1} autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
         <div className="h-[50%] space-y-32">
-        <div
-          data-aos="fade-down" data-aos-offset="200"
-          className="text-center text-white font-georgia text-8xl mx-40"
-        >
-          Our Brands
-        </div>
-        <div className="flex space-x-32">
-          <img
-            data-aos="fade-right"
-            src={div_3_1_img}
-            alt="Brand 1"
-            className="w-[36rem]"
-          />
-          <img
-            data-aos="fade-left"
-            src={div_3_2_img}
-            alt="Brand 2"
-            className="w-[36rem]"
-          />
-        </div>
+
+          <div
+            data-aos="fade-down" data-aos-offset="200"
+            className="text-center text-white font-georgia text-8xl mx-40"
+          >
+            Our Brands
+          </div>
+          <div className="flex space-x-32">
+            <img
+              data-aos="fade-right"
+              src={div_3_1_img}
+              alt="Brand 1"
+              className="w-[36rem]"
+            />
+            <img
+              data-aos="fade-left"
+              src={div_3_2_img}
+              alt="Brand 2"
+              className="w-[36rem]"
+            />
+          </div>
         </div>
       </div>
 
@@ -248,52 +253,32 @@ export default function App() {
         </div>
       </div>
 
-      <div id='functions' className="div-5 bg-cover bg-center h-screen w-screen flex flex-col items-center justify-center space-y-10">
+      <div id='functions' className="div-5 bg-cover bg-center h-screen w-screen flex flex-col items-center space-y-10">
         <div
           data-aos="fade-down"
-          className="text-center text-white font-georgia text-8xl mx-40 my-10"
+          className="text-center text-white font-georgia text-9xl mx-40 mt-24"
         >
           Our Functions
         </div>
-        <div className="advertisers text-center p-6 bg-[#92898940] bg-opacity-20 text-[#FFFFFF] rounded-lg w-1/3">
-          <p className="font-georgia text-4xl">Advertisers</p>
-          <p className="font-helvetica text-lg mt-4 mb-12">
-            {
-              '"With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand"'
-            }
-          </p>
-        </div>
-        <div className="publishers text-center p-6 bg-[#92898940] bg-opacity-20 text-[#FFFFFF] rounded-lg w-1/3">
-          <p className="font-georgia text-4xl">Publishers</p>
-          <p className="font-helvetica text-lg mt-4 mb-12">
-            {
-              '"With data as our compass, we navigate the media landscape, achieving resonance and impact for your brand"'
-            }
-          </p>
-        </div>
+        <img src={div_5_1_img} data-aos="fade-up" alt="Our Functions" className="w-[55rem]" />
       </div>
 
-      <div className="div-6 relative bg-cover bg-center w-full flex flex-col items-center justify-center text-white">
-        <span className="block font-bold font-georgia text-9xl px-60 text-center z-10">
+      <div className="div-6 relative bg-cover min-h-screen w-full flex flex-col items-center justify-center text-white">
+        <video src={videoBg2} autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
+        <span className="block font-georgia text-9xl px-60 text-center relative z-10">
           3Billion
         </span>
-        <span className="block font-arial text-6xl z-10">Impressions Monthly</span>
+        <span className="block font-arial text-6xl relative z-10">Impressions Monthly</span>
+      </div>
 
-        <div className="relative mb-15 w-10/12 flex justify-center z-10">
-          <iframe
-            src="https://drive.google.com/file/d/14cPhQ8YeV3yVWajMJKC2MOasTDp7Fs__/preview"
-            width="1408" 
-            height="792" 
-            allow="autoplay"
-            className="bg-[#2B4150] rounded-lg my-32"
-          ></iframe>
-        </div>
+        <div className="div-7 relative mb-15 w-10/12 flex justify-center z-10">
 
         <Swiper
   effect={"coverflow"}
   grabCursor={true}
   centeredSlides={true}
   slidesPerView={1}
+  initialSlide={1}
   coverflowEffect={{
     rotate: 0,
     stretch: 0,
