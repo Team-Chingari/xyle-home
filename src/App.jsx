@@ -20,8 +20,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import logo from "./assets/xyle-logo.png";
 import navbar_logo from "./assets/xyle-navbar-logo.png";
-import videoBg1 from "./assets/vid.mp4";
-import videoBg2 from "./assets/globe.mp4";
 
 export default function App() {
   const swiperRef = useRef(null);
@@ -190,7 +188,7 @@ export default function App() {
       </div>
 
       <div id='brands' className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center">
-        <video src={videoBg1} autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
+        <video src="https://storage.googleapis.com/videobucketxyle/vid.mp4" autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
         <div className="h-[50%] space-y-32 z-10">
 
           <div
@@ -266,7 +264,17 @@ export default function App() {
       </div>
 
       <div className="div-6 relative bg-cover min-h-screen w-full flex flex-col items-center justify-center text-white">
-        <video src={videoBg2} autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
+        <video
+          src="https://storage.googleapis.com/videobucketxyle/globe.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          onCanPlay={() => console.log("Video can play")}
+          onError={(e) => console.error("Video error:", e)}
+        >        </video>
+
         <span className="block font-georgia text-9xl px-60 text-center relative z-10">
           3Billion
         </span>
