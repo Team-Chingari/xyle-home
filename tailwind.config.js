@@ -9,6 +9,7 @@ export default {
         jaldi: ["Jaldi", "sans-serif"],
         gotham: ["Gotham", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        alfaSlabOne: ["Alfa Slab One", "cursive"],
       },
     },
   },

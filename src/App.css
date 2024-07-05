@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+
+
 .div-1 {
   background-image: url(assets/div-1-img.png);
 }
@@ -14,6 +16,8 @@ textarea::placeholder {
   opacity: 1; /* Ensure the placeholder text is fully opaque */
 }
 
+
+
 .div-2 {
   background-image: url(assets/div-2-img.png);
 }
@@ -23,7 +27,7 @@ textarea::placeholder {
 }
 
 .div-4 {
-  background-image: url(assets/div-4-1-img.png);
+  background-image: url(assets/div-4-img.png);
 }
 
 .div-5 {

@@ -16,6 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import logo from "./assets/xyle-logo.png";
+import navbar_logo from "./assets/xyle-navbar-logo.png";
 
 export default function App() {
   const swiperRef = useRef(null);
@@ -98,45 +99,60 @@ export default function App() {
 
   return (
     <>
-      <div className="div-1 relative bg-cover bg-center min-h-screen flex items-center justify-center">
+
+      <nav className="navbar fixed top-0 left-0 w-full bg-none bg-opacity-90 p-4 flex items-center justify-between z-50">
+        <div className="flex flex-col items-center">
+          <img src={navbar_logo} alt="Xyle Logo" className="h-[4rem]" />
+          <h1 className="text-white text-[1.37rem] font-alfaSlabOne">XYLE</h1>
+        </div>
+        <div className="flex items-center text-white underline hover:text-gray-300 font-helvetica space-x-8">
+          <a href="#home">Home</a>
+          <a href="#brands">Our Brands</a>
+          <a href="#functions">Our Functions</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+      </nav>
+
+
+      <div id="home" className="div-1 relative bg-cover bg-center min-h-screen flex items-center justify-center">
         <div className="text-center text-white">
-          <span data-aos="fade-up" className="block font-judson text-9xl">
+          <span data-aos="fade-up" className="block font-georgia text-9xl">
             Connecting Dots
           </span>
           <span
             data-aos="fade-up"
             data-aos-delay="50"
-            className="block font-judson text-6xl"
+            className="block font-judson text-5xl"
           >
             Between
           </span>
           <span
             data-aos="fade-up"
             data-aos-delay="100"
-            className="block font-judson text-9xl -mt-2"
+            className="block text-[#31A2C4] font-georgia text-9xl -mt-2"
           >
-            Advertisers
+            Brands
           </span>
           <span
             data-aos="fade-up"
             data-aos-delay="150"
-            className="block font-judson text-6xl"
+            className="block font-judson text-5xl"
           >
             And
           </span>
           <span
             data-aos="fade-up"
             data-aos-delay="200"
-            className="block font-judson text-9xl -mt-2"
+            className="block text-[#31A2C4] font-georgia text-9xl -mt-2"
           >
-            Brands
+            Audience
           </span>
         </div>
       </div>
 
       <div className="div-2 relative bg-cover bg-center min-h-screen flex ">
         <div
-          className="div-2-1 w-1/2 h-full text-white font-jaldi text-6xl p-36 pr-20 leading-tight"
+          className="div-2-1 w-1/2 h-full text-white font-jaldi text-[4.6rem] p-36 pr-20 leading-tight"
           data-aos="fade-right"
         >
           Transforming ideas into media marvels, we&apos;re a dedicated agency
@@ -168,14 +184,15 @@ export default function App() {
         </div>
       </div>
 
-      <div className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center space-y-20">
+      <div id='brands' className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center">
+        <div className="h-[50%] space-y-32">
         <div
           data-aos="fade-down" data-aos-offset="200"
-          className="text-center text-white font-georgia text-8xl mx-40 my-10"
+          className="text-center text-white font-georgia text-8xl mx-40"
         >
           Our Brands
         </div>
-        <div className="flex space-x-10">
+        <div className="flex space-x-32">
           <img
             data-aos="fade-right"
             src={div_3_1_img}
@@ -189,12 +206,13 @@ export default function App() {
             className="w-[36rem]"
           />
         </div>
+        </div>
       </div>
 
       <div className="div-4 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
         <div className="text-center font-georgia text-white font-arial text-8xl mx-40 my-20">
-          <span className="block font-bold text-9xl">Some Key Achievements</span>
-          {/* <span className="block font-bold text-9xl">In Your Favour</span> */}
+          <span className="block font-bold text-9xl">Some Key</span>
+          <span className="block font-bold text-9xl">Achievements</span>
         </div>
         <div className="div42 flex justify-center text-center text-white w-full">
           <div className="relative w-full flex justify-center items-center">
@@ -204,16 +222,16 @@ export default function App() {
               <div className="relative flex justify-between text-center text-white px-16 py-2 w-full max-w-7xl gap-">
                 <div className="px-4">
                   <span className="block font-georgia font-bold text-7xl p-2">
-                  100+
+                  150+
                   </span>
-                  <span className="block font-helvetica text-3xl">Brands Served</span>
+                  <span className="block font-helvetica text-3xl">Clients</span>
                 </div>
                 <div className="px-4">
                   <span className="block font-georgia font-bold text-7xl p-2">
-                    50+
+                    320+
                   </span>
                   <span className="block font-helvetica text-3xl">
-                  SSPs & DSPs Partnered
+                    Websites/Apps
                   </span>
                 </div>
                 <div className="px-4">
@@ -221,7 +239,7 @@ export default function App() {
                     95%
                   </span>
                   <span className="block font-helvetica text-3xl">
-                  Performance Delivered
+                    Customer Retention
                   </span>
                 </div>
               </div>
@@ -230,7 +248,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="div-5 bg-cover bg-center h-screen w-screen flex flex-col items-center justify-center space-y-10">
+      <div id='functions' className="div-5 bg-cover bg-center h-screen w-screen flex flex-col items-center justify-center space-y-10">
         <div
           data-aos="fade-down"
           className="text-center text-white font-georgia text-8xl mx-40 my-10"
@@ -345,7 +363,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="div-9 relative bg-cover bg-center w-screen flex justify-center items-center p-48">
+      <div id='contact' className="div-9 relative bg-cover bg-center w-screen flex justify-center items-center p-48">
         <p className="font-georgia text-white mr-16 bg-transparent text-8xl  w-1/2">
           Let&apos;s Get Acquainted
         </p>
