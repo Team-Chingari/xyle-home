@@ -154,15 +154,20 @@ export default function App() {
       </div>
 
       <div className="div-2 relative bg-cover bg-center min-h-screen flex ">
-        <div
-          className="div-2-1 w-1/2 h-full text-white font-jaldi text-[4.6rem] p-36 pr-20 leading-tight"
-          data-aos="fade-right"
-        >
-          Transforming ideas into media marvels, we&apos;re a dedicated agency
-          crafting campaigns. With data as our compass, we navigate the media
-          landscape, achieving resonance and impact for your brand
-        </div>
-        <div className="div-2-2 w-1/2 p-40 pl-24 h-screen flex flex-col">
+      <div
+        className="div-2-1 w-1/2 h-[50%] text-white font-helveticaLight 
+                  sm:text-[1rem] 
+                  md:text-[1.5rem] 
+                  lg:text-[2rem] 
+                  xl:text-[4.2rem] 
+                  pl-36 pt-44 pr-20 pb-36 md:pr-12 leading-tight"
+        data-aos="fade-right"
+      >
+        Transforming ideas into media marvels, we&apos;re a dedicated agency
+        crafting campaigns. With data as our compass, we navigate the media
+        landscape, achieving resonance and impact for your brand
+      </div>
+        <div className="div-2-2 w-1/2 p-40 pt-44 pl-24 h-screen flex flex-col">
           <div className="flex flex-col h-2/5">
             <div className="flex w-full h-full">
               <img data-aos="fade-left" src={div_2_1_img} className="w-3/5" />
@@ -192,7 +197,7 @@ export default function App() {
         <div className="h-[50%] space-y-32 z-10">
 
           <div
-            data-aos="fade-down" data-aos-offset="200"
+            data-aos="fade-down" data-aos-offset="100"
             className="text-center text-white font-georgia text-8xl mx-40"
           >
             Our Brands
@@ -200,12 +205,14 @@ export default function App() {
           <div className="flex space-x-32">
             <img
               data-aos="fade-right"
+              data-aos-offset="100"
               src={div_3_1_img}
               alt="Brand 1"
               className="w-[36rem]"
             />
             <img
               data-aos="fade-left"
+              data-aos-offset="100"
               src={div_3_2_img}
               alt="Brand 2"
               className="w-[36rem]"
@@ -215,9 +222,9 @@ export default function App() {
       </div>
 
       <div className="div-4 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
-        <div className="text-center font-georgia text-white font-arial text-8xl mx-40 my-20">
-          <span className="block font-bold text-9xl">Some Key</span>
-          <span className="block font-bold text-9xl">Achievements</span>
+        <div className="text-center font-georgia text-white text-8xl mx-40 my-20">
+          <span className="block text-9xl">Some Key</span>
+          <span className="block text-9xl">Achievements</span>
         </div>
         <div className="div42 flex justify-center text-center text-white w-full">
           <div className="relative w-full flex justify-center items-center">
@@ -253,14 +260,21 @@ export default function App() {
         </div>
       </div>
 
-      <div id='functions' className="div-5 bg-cover bg-center h-screen w-screen flex flex-col items-center space-y-10">
-        <div
+      <div id='functions' className="div-5 bg-cover bg-center w-full flex flex-col items-center justify-center space-y-10 py-24">
+        <h2
           data-aos="fade-down"
-          className="text-center text-white font-georgia text-9xl mx-40 mt-24"
+          className="text-center text-white font-georgia text-6xl sm:text-7xl md:text-8xl lg:text-9xl mx-4 sm:mx-8 md:mx-16 lg:mx-40"
         >
           Our Functions
+        </h2>
+        <div className="w-[60%] px-4 flex justify-center">
+          <img
+            src={div_5_1_img}
+            data-aos="fade-up"
+            alt="Our Functions"
+            className="w-[80%] h-auto"
+          />
         </div>
-        <img src={div_5_1_img} data-aos="fade-up" alt="Our Functions" className="w-[55rem]" />
       </div>
 
       <div className="div-6 relative bg-cover min-h-screen w-full flex flex-col items-center justify-center text-white">
@@ -275,7 +289,7 @@ export default function App() {
           onError={(e) => console.error("Video error:", e)}
         >        </video>
 
-        <span className="block font-georgia text-9xl px-60 text-center relative z-10">
+        <span className="block font-georgia text-9xl px-60 text-center drop-shadow-2xl relative z-10">
           3Billion
         </span>
         <span className="block font-arial text-6xl relative z-10">Impressions Monthly</span>
@@ -341,7 +355,7 @@ export default function App() {
       </div>
 
       <div className="div-8 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
-        <span className="block font-bold font-georgia text-8xl text-white">
+        <span className="block font-georgia text-8xl text-white">
           Our Partners
         </span>
         <div className="w-3/4 flex flex-col gap-y-8 items-center justify-center border-t-2 border-opacity-10 border-white mt-24">
@@ -359,7 +373,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div id='contact' className="div-9 relative bg-cover bg-center w-screen flex justify-center items-center p-48">
+      <div id='contact' className="div-9 relative bg-cover bg-center w-full flex justify-center items-center p-48">
         <p className="font-georgia text-white mr-16 bg-transparent text-8xl  w-1/2">
           Let&apos;s Get Acquainted
         </p>

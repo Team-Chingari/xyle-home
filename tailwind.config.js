@@ -10,6 +10,7 @@ export default {
         gotham: ["Gotham", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         alfaSlabOne: ["Alfa Slab One", "cursive"],
+        helveticaLight: ["Helvetica", "sans-serif"],
       },
     },
   },
