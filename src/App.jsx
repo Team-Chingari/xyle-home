@@ -5,7 +5,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./App.css";
 import div_2_1_img from "./assets/div-2-1-img.png";
 import div_2_2_img from "./assets/div-2-2-img.png";
@@ -84,8 +84,9 @@ export default function App() {
         const scrollPercent =
           (window.innerHeight - div5Rect.top) /
           (window.innerHeight + div5Rect.height);
-        advertisers.style.transform = `translateX(${50 - scrollPercent * 150
-          }%)`;
+        advertisers.style.transform = `translateX(${
+          50 - scrollPercent * 150
+        }%)`;
         publishers.style.transform = `translateX(${scrollPercent * 150 - 50}%)`;
       } else {
         advertisers.style.transform = "translateX(100%)";
@@ -102,7 +103,6 @@ export default function App() {
 
   return (
     <>
-
       <nav className="navbar fixed top-0 left-0 w-full bg-none bg-opacity-90 p-4 flex items-center justify-between z-50">
         <div className="flex flex-col items-center">
           <img src={navbar_logo} alt="Xyle Logo" className="h-[4rem]" />
@@ -116,8 +116,10 @@ export default function App() {
         </div>
       </nav>
 
-
-      <div id="home" className="div-1 relative bg-cover bg-center min-h-screen flex items-center justify-center">
+      <div
+        id="home"
+        className="div-1 relative bg-cover bg-center h-screen w-screen flex items-center justify-center"
+      >
         <div className="text-center text-white">
           <span data-aos="fade-up" className="block font-georgia text-9xl">
             Connecting Dots
@@ -153,21 +155,16 @@ export default function App() {
         </div>
       </div>
 
-      <div className="div-2 relative bg-cover bg-center min-h-screen flex ">
-      <div
-        className="div-2-1 w-1/2 h-[50%] text-white font-helveticaLight 
-                  sm:text-[1rem] 
-                  md:text-[1.5rem] 
-                  lg:text-[2rem] 
-                  xl:text-[4.2rem] 
-                  pl-36 pt-44 pr-20 pb-36 md:pr-12 leading-tight"
-        data-aos="fade-right"
-      >
-        Transforming ideas into media marvels, we&apos;re a dedicated agency
-        crafting campaigns. With data as our compass, we navigate the media
-        landscape, achieving resonance and impact for your brand
-      </div>
-        <div className="div-2-2 w-1/2 p-40 pt-44 pl-24 h-screen flex flex-col">
+      <div className="div-2 relative bg-cover bg-center w-screen h-screen flex gap-x-40 justify-center items-center">
+        <div
+          className="div-2-1 w-[40%] text-white font-helveticaLight text-2xl xl:text-6xl lg:text-4xl bigger-line-height"
+          data-aos="fade-right"
+        >
+          Transforming ideas into media marvels, we&apos;re a dedicated agency
+          crafting campaigns. With data as our compass, we navigate the media
+          landscape, achieving resonance and impact for your brand.
+        </div>
+        <div className="div-2-2 w-[38%] flex flex-col">
           <div className="flex flex-col h-2/5">
             <div className="flex w-full h-full">
               <img data-aos="fade-left" src={div_2_1_img} className="w-3/5" />
@@ -192,12 +189,21 @@ export default function App() {
         </div>
       </div>
 
-      <div id='brands' className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center">
-        <video src="https://storage.googleapis.com/videobucketxyle/vid.mp4" autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
+      <div
+        id="brands"
+        className="div-3 relative overflow-x-hidden bg-cover bg-center min-h-screen flex flex-col items-center justify-center"
+      >
+        <video
+          src="https://storage.googleapis.com/videobucketxyle/vid.mp4"
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        ></video>
         <div className="h-[50%] space-y-32 z-10">
-
           <div
-            data-aos="fade-down" data-aos-offset="100"
+            data-aos="fade-down"
+            data-aos-offset="100"
             className="text-center text-white font-georgia text-8xl mx-40"
           >
             Our Brands
@@ -260,7 +266,10 @@ export default function App() {
         </div>
       </div>
 
-      <div id='functions' className="div-5 bg-cover bg-center w-full flex flex-col items-center justify-center space-y-10 py-24">
+      <div
+        id="functions"
+        className="div-5 bg-cover bg-center w-screen h-screen flex flex-col items-center justify-center space-y-10 py-24"
+      >
         <h2
           data-aos="fade-down"
           className="text-center text-white font-georgia text-6xl sm:text-7xl md:text-8xl lg:text-9xl mx-4 sm:mx-8 md:mx-16 lg:mx-40"
@@ -284,15 +293,18 @@ export default function App() {
           muted
           loop
           playsInline
-          className="absolute top-0 left-0 opacity-50 w-full h-full object-cover z-0"
+          className="absolute top-0 left-0 opacity-50 w-screen h-screen object-cover z-0"
           onCanPlay={() => console.log("Video can play")}
           onError={(e) => console.error("Video error:", e)}
-        >        </video>
+        ></video>
+        <div className="absolute top-0 left-0 h-screen w-screen bg-black opacity-25 z-10"></div>
 
-        <span className="block font-georgia text-9xl px-60 text-center drop-shadow-2xl relative z-10">
+        <span className="block font-georgia text-9xl px-60 text-center drop-shadow-2xl relative z-10 text-glow">
           3Billion
         </span>
-        <span className="block font-arial text-6xl relative z-10">Impressions Monthly</span>
+        <span className="block font-arial text-6xl relative z-10 text-glow">
+          Impressions Monthly
+        </span>
       </div>
 
       <div className="relative overflow-x-clip flex flex-col items-center justify-center">
@@ -321,12 +333,20 @@ export default function App() {
           modules={[EffectCoverflow, Navigation, Pagination]}
         >
           {carouselItems.map((item, index) => (
-            <SwiperSlide key={index} className="flex items-center justify-center">
+            <SwiperSlide
+              key={index}
+              className="flex items-center justify-center"
+            >
               <div
-                className={`flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-[80%] h-[50%] ${activeSlideIndex === index ? "active-slide" : "overlay-background"
-                  }`}
+                className={`flex flex-col items-center justify-center rounded-3xl px-6 pt-6 pb-3 w-[80%] h-[50%] ${
+                  activeSlideIndex === index
+                    ? "active-slide"
+                    : "overlay-background"
+                }`}
               >
-                <p className="px-16 text-white text-3xl text-center">{item.quote}</p>
+                <p className="px-16 text-white text-3xl text-center">
+                  {item.quote}
+                </p>
                 <div className="w-full flex justify-end mt-2">
                   <div className="text-xl">
                     <p className="text-white text-2xl">{item.author}</p>
@@ -373,7 +393,10 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div id='contact' className="div-9 relative bg-cover bg-center w-full flex justify-center items-center p-48">
+      <div
+        id="contact"
+        className="div-9 relative bg-cover bg-center w-full flex justify-center items-center p-48"
+      >
         <p className="font-georgia text-white mr-16 bg-transparent text-8xl  w-1/2">
           Let&apos;s Get Acquainted
         </p>
@@ -417,7 +440,9 @@ export default function App() {
           </div>
           <div className="w-1/3">
             <h3 className="text-lg font-black">OUR BRANDS</h3>
-            <a target="_blank" href="https://monetiseup.com/"><p className="text-md mt-2">Monetiseup</p></a>
+            <a target="_blank" href="https://monetiseup.com/">
+              <p className="text-md mt-2">Monetiseup</p>
+            </a>
             <p className="text-md mt-2">ResponsIQ</p>
           </div>
           <div className="w-1/3">
