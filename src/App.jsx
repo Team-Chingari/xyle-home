@@ -155,7 +155,7 @@ export default function App() {
 
       <div className="div-2 relative bg-cover bg-center min-h-screen flex ">
         <div
-          className="div-2-1 w-1/2 h-full text-white font-jaldi text-[4.6rem] p-36 pr-20 leading-tight"
+          className="div-2-1 w-1/2 h-full text-white font-helvetica text-[3.6rem] p-36 pr-20 leading-tight"
           data-aos="fade-right"
         >
           Transforming ideas into media marvels, we&apos;re a dedicated agency
@@ -216,8 +216,8 @@ export default function App() {
 
       <div className="div-4 relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center">
         <div className="text-center font-georgia text-white font-arial text-8xl mx-40 my-20">
-          <span className="block font-bold text-9xl">Some Key</span>
-          <span className="block font-bold text-9xl">Achievements</span>
+          <span className="block font-extralight text-9xl">Some Key</span>
+          <span className="block font-extralight text-9xl">Achievements</span>
         </div>
         <div className="div42 flex justify-center text-center text-white w-full">
           <div className="relative w-full flex justify-center items-center">
@@ -270,7 +270,7 @@ export default function App() {
           muted
           loop
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          className="absolute top-0 left-0 opacity-50 w-full h-full object-cover z-0"
           onCanPlay={() => console.log("Video can play")}
           onError={(e) => console.error("Video error:", e)}
         >        </video>
