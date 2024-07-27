@@ -49,15 +49,15 @@ export default function App() {
     },
     {
       quote:
-        '"Vidit Kothari, why you gotta suck so much butt? Stop crapping everywhere you go, what is this Pranav Dhawan behaviour?"',
-      author: "Sumedha",
-      designation: "CEO, ResponsIQ",
+        '"Working with Xyle has been a game-changer for our advertising strategy. Their team is incredibly knowledgeable and results-oriented."',
+      author: "Tripp Davis",
+      designation: "CEO, Innovate Inc.",
     },
     {
       quote:
-        '"Pranav Dhawan - khali kanastar, tum kuch karte hi toh nahi ho, yahi toh dikkat hai? Bring your dairy."',
-      author: "Sumedha",
-      designation: "CEO, ResponsIQ",
+        '"Xyle’s expertise in media buying has significantly boosted our brand’s visibility. Their data-driven approach is unmatched!"',
+      author: "Marshall Medoff",
+      designation: "Marketing Director, Blue Ridge Media",
     },
     {
       quote:
