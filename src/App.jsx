@@ -59,18 +59,6 @@ export default function App() {
       author: "Marshall Medoff",
       designation: "Marketing Director, Blue Ridge Media",
     },
-    {
-      quote:
-        '"Pranav Dhawan - khali kanastar, tum kuch karte hi toh nahi ho, yahi toh dikkat hai? Bring your dairy."',
-      author: "Sumedha",
-      designation: "CEO, ResponsIQ",
-    },
-    {
-      quote:
-        '"Pranav Dhawan - khali kanastar, tum kuch karte hi toh nahi ho, yahi toh dikkat hai? Bring your dairy."',
-      author: "Sumedha",
-      designation: "CEO, ResponsIQ",
-    },
   ];
 
   useEffect(() => {
@@ -110,7 +98,7 @@ export default function App() {
             XYLE
           </h1>
         </div>
-        <div className="flex flex-wrap justify-center items-center text-white underline hover:text-gray-300 font-helvetica space-x-4 sm:space-x-8">
+        <div className="flex flex-wrap justify-center items-center text-white underline hover:text-gray-300 font-helvetica space-x-2 sm:space-x-2">
           <a href="#home" className="mb-2 sm:mb-0">
             Home
           </a>
